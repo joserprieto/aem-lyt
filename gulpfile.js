@@ -108,6 +108,16 @@ var basePaths =
             src     : basePaths.assets.src + 'img/',
             dest    : basePaths.assets.dest + 'img/'
         },
+        fonts:
+        {
+            src     : basePaths.assets.src + 'fonts/',
+            dest    : basePaths.assets.dest + 'fonts/'
+        },
+        icons:
+        {
+            src     : basePaths.assets.src + 'icons/',
+            dest    : basePaths.assets.dest + 'icons/'
+        },
         jSscripts:
         {
             src     : basePaths.assets.src + 'js/',
@@ -136,7 +146,7 @@ var basePaths =
     },
     // Materialize:
     jsMaterialize =
-            basePaths.assets.bower + 'Materialize/dist/js' +
+            basePaths.assets.bower + 'Materialize/dist/js/' +
                 (isProduction?'materialize.min.js':'materialize.js'),
     // jQuery:
     jsJQuery =
@@ -151,8 +161,8 @@ var basePaths =
             ],
         jSscripts:
             [
-                jsMaterialize,
-                jsJQuery
+                jsJQuery,
+                jsMaterialize
             ]
     };
 
@@ -160,7 +170,7 @@ var basePaths =
 
 var cssDestFileName     = isProduction?'styles.min.css':'styles.css',
     cssSassDestFileName = isProduction?'sass-styles.min.css':'sass-styles.css',
-    jsFDestFileName     = isProduction?'js.min.js':'js.js';
+    jsFDestFileName     = isProduction?'scripts.min.js':'scripts.js';
 
 
 /**
@@ -183,8 +193,8 @@ gulp.task('clean-dest', function() {
                 paths.jSscripts.dest + '/**/*.*',       // jS Files
                 paths.cssStyles.dest + '/**/*.*',       // CSS Files
                 paths.images.dest + '/**/*.*',          // Image Files
-                basePaths.assets.dest + '/ico/**/*.*',  // ICO Files
-                basePaths.assets.dest + '/font/**/*.*'  // Font Files
+                basePaths.assets.dest + '/ico/**',      // ICO Files
+                basePaths.assets.dest + '/fonts/**'     // Font Files
             ],
             {
                 read: false
@@ -206,23 +216,42 @@ gulp.task('clean-dest', function() {
  */
 
 /**
- * @task        copy-plain-assets
- * @description copy assets files that don't need any operation
+ * @task        copy-fonts
+ * @description copy assets fonts files that don't need any operation
  */
-gulp.task('copy-plain-assets', function() {
+gulp.task('copy-fonts', function() {
     var gulpif  = plugins.if,
         debug   = plugins.debug;
     // copy any assets files in source path to public path (web root)
     gulp.src(
             [
-                basePaths.assets.src + '/ico/**/*',                     // ICO Files
-                basePaths.assets.src + '/font/**/*'                     // Font Files
+                paths.fonts.src + '/**'   // Font Files
             ]
         )
-        .pipe(gulpif(!isProduction, debug({title: 'copy-play-assets:'})))
+        .pipe(gulpif(!isProduction, debug({title: 'copy-fonts:'})))
         .pipe(
-            gulp.dest(basePaths.assets.dest)
+            gulp.dest(paths.fonts.dest)
         );
+});
+
+/**
+ * @task        copy-icons
+ * @description copy assets icons files that don't need any operation
+ */
+gulp.task('copy-icons', function() {
+    var gulpif  = plugins.if,
+        debug   = plugins.debug;
+    // copy any assets files in source path to public path (web root)
+    gulp.src(
+            [
+                paths.icons.src + '/**'   // Icon Files
+            ]
+        )
+        .pipe(gulpif(!isProduction, debug({title: 'copy-icons:'})))
+        .pipe(
+            gulp.dest(paths.fonts.dest
+        )
+    );
 });
 
 /**
@@ -413,14 +442,13 @@ gulp.task('build-sass', function() {
  * @description configure which files to watch and what tasks to use on file changes
  */
 gulp.task('watch', function() {
+
+    var livereload = plugins.livereload;
+
     gulp.watch(appFiles.jSscripts, ['jshint']);
     gulp.watch(appFiles.html, ['copy-plain-html']);
-    gulp.watch(
-        [
-            basePaths.assets.src + '/ico/**/*',                     // ICO Files
-            basePaths.assets.src + '/font/**/*'                     // Font Files
-        ],
-        ['copy-plain-assets']);
+    gulp.watch(paths.fonts.src, ['copy-fonts']);
+    gulp.watch(paths.icons.src, ['copy-icons']);
     gulp.watch(
         [
             basePaths.assets.src + '/**/*.+(jpg|jpeg|gif|png|svg)'  // Image Files
@@ -429,6 +457,29 @@ gulp.task('watch', function() {
     gulp.watch(appFiles.cssStyles, ['build-css']);
     gulp.watch(appFiles.sassStyles, ['build-css']);
     gulp.watch(appFiles.jSscripts, ['build-js']);
+
+    // Create LiveReload server
+    livereload.listen();
+
+    // Watch any files in dist/, reload on change
+    gulp.watch(
+            [
+                basePaths.html.dest + '/**',
+                basePaths.assets.dest + '/**'
+            ]
+        )
+        .on('change', livereload.changed);
+
+    /*
+    Remember to place this snippet on the html for listen to the livereload server:
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+    If your web site is running on another server, you need to specify the IP address of your local computer instead:
+
+    <script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>
+    */
+
 
 });
 
@@ -442,7 +493,8 @@ gulp.task('watch', function() {
  * @description define the default task and add the watch task to it, and the other task, before
  */
 gulp.task('default', ['clean-dest',
-                      'copy-plain-assets',
+                      'copy-fonts',
+                      'copy-icons',
                       'copy-plain-html',
                       'copy-images',
                       'build-css',

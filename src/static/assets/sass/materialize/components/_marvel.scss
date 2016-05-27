@@ -1,0 +1,52 @@
+/* marvel-regular - latin */
+@font-face {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$marvel-font-path}marvel-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Marvel'), local('Marvel-Regular'),
+  url('#{$marvel-font-path}marvel-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('#{$marvel-font-path}marvel-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('#{$marvel-font-path}marvel-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('#{$marvel-font-path}marvel-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('#{$marvel-font-path}marvel-v6-latin-regular.svg#Marvel') format('svg'); /* Legacy iOS */
+}
+/* marvel-italic - latin */
+@font-face {
+  font-family: 'Marvel';
+  font-style: italic;
+  font-weight: 400;
+  src: url('#{$marvel-font-path}marvel-v6-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Marvel Italic'), local('Marvel-Italic'),
+  url('#{$marvel-font-path}marvel-v6-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('#{$marvel-font-path}marvel-v6-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+  url('#{$marvel-font-path}marvel-v6-latin-italic.woff') format('woff'), /* Modern Browsers */
+  url('#{$marvel-font-path}marvel-v6-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('#{$marvel-font-path}marvel-v6-latin-italic.svg#Marvel') format('svg'); /* Legacy iOS */
+}
+/* marvel-700 - latin */
+@font-face {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$marvel-font-path}marvel-v6-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Marvel Bold'), local('Marvel-Bold'),
+  url('#{$marvel-font-path}marvel-v6-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('#{$marvel-font-path}marvel-v6-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('#{$marvel-font-path}marvel-v6-latin-700.woff') format('woff'), /* Modern Browsers */
+  url('#{$marvel-font-path}marvel-v6-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('#{$marvel-font-path}marvel-v6-latin-700.svg#Marvel') format('svg'); /* Legacy iOS */
+}
+/* marvel-700italic - latin */
+@font-face {
+  font-family: 'Marvel';
+  font-style: italic;
+  font-weight: 700;
+  src: url('#{$marvel-font-path}marvel-v6-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local('Marvel Bold Italic'), local('Marvel-BoldItalic'),
+  url('#{$marvel-font-path}marvel-v6-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('#{$marvel-font-path}marvel-v6-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+  url('#{$marvel-font-path}marvel-v6-latin-700italic.woff') format('woff'), /* Modern Browsers */
+  url('#{$marvel-font-path}marvel-v6-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('#{$marvel-font-path}marvel-v6-latin-700italic.svg#Marvel') format('svg'); /* Legacy iOS */
+}

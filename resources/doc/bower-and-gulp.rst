@@ -18,7 +18,7 @@ General commands for init:
     # Gulp:
     # if we haven't gulp installed yet (we install global):
     npm install --global gulp-cli
-    # packages:
+    # packages (not all listed; see package.json):
     npm install --save-dev gulp
     npm install --save-dev gulp-util
     npm install --save-dev event-stream
@@ -28,7 +28,7 @@ General commands for init:
     sudo npm install -g bower
     # init bower:
     bower init
-    # packages:
+    # packages (not all listed; see bower.json):
     bower install jquery --save
     bower install materialize --save
     bower install fontawesome --save
