@@ -1,13 +1,25 @@
-Layout general para web Arte et Marte.
-======================================
+General layout for the website arteetmarte.org
+==============================================
 
-Layout general para la web Arte et Marte.
+General layout for the website arteetmarte.org
 
-Se utilizará Material Design Lite:
+We use the next elements and components:
 
-https://getmdl.io/
+- Material Design Lite
+- jQuery
+- FontAwesome
+- Google Fonts
+- Material Design Icons
 
-Y se utilizará con bower como gestor de paquetes frontend
+We use bower as front-end package manager; we use Bower to download the assets and plugins and gulp to compile,
+concatenate and minify them.
+
+
+
+- jQuery
+- FontAwesome
+- Google Fonts
+- Material Design Icons
 
 https://getmdl.io/started/index.html
 
