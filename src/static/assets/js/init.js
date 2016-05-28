@@ -9,7 +9,7 @@
          */
         $('.button-collapse').sideNav({
             menuWidth: '50%', // Default is 240
-            edge: 'left', // Choose the horizontal origin
+            edge: 'left' // Choose the horizontal origin
         });
         /**
          * Init parallax sections:
