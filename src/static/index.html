@@ -36,6 +36,8 @@
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
 
+
+
 </head>
 <body>
 
@@ -111,24 +113,137 @@
 </nav>
 
 
+<!-- Materializecss Home slider -->
+<!--<section id="home-top-banner">-->
+    <!--<div class="home top-carousel slider">-->
+        <!--<ul class="home slides">-->
+            <!--<li>-->
+                <!--<img src="/assets/img/home-carousel-1.jpg">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="/assets/img/home-carousel-2.jpg">-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</section>-->
 
-<div id="top-banner" class="slider">
-    <ul class="slides">
-        <li>
-            <img src="/assets/img/home-carousel-1.jpg">
-        </li>
-        <li>
-            <img src="/assets/img/home-carousel-2.jpg">
-        </li>
-        <li>
-            <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-            <div class="caption right-align">
-                <h3>Right Aligned Caption</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+<section id="home-top-banner">
+    <!-- Swiper full-width -->
+    <div class="home top-carousel swiper-container responsive-swiper-container">
+        <div class="home top-carousel swiper-wrapper">
+            <div class="home top-carousel swiper-slide">
+                <img class="responsive-img" src="/assets/img/home-carousel-1.jpg">
             </div>
+            <div class="home top-carousel swiper-slide">
+                <img class="responsive-img" src="/assets/img/home-carousel-2.jpg">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="home top-carousel swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Arrows -->
+        <div class="home top-carousel swiper-button-next swiper-button-white"></div>
+        <div class="home top-carousel swiper-button-prev swiper-button-white"></div>
+    </div>
+</section>
+
+<!--
+<div class="home top-carousel slider" style="height: 618px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+    <ul class="home slides" style="height: 578px;">
+        <li class="velocity-animating active" style="opacity: 0.991917; transform: translateX(0px) translateY(0px);">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="background-image: url(&quot;/assets/img/home-carousel-1.jpg&quot;);">
+        </li>
+        <li class="velocity-animating" style="opacity: 0.00808256; transform: translateX(0px) translateY(0px);">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="background-image: url(&quot;/assets/img/home-carousel-2.jpg&quot;);">
         </li>
     </ul>
+    <ul class="indicators">
+        <li class="indicator-item active"></li>
+        <li class="indicator-item"></li>
+    </ul>
 </div>
+-->
+
+<!-- /Materializecss Home slider -->
+
+<!-- Swiper Home slider -->
+<!--<div class="swiper-container">-->
+    <!--<div class="swiper-wrapper">-->
+        <!--<div class="swiper-slide">-->
+            <!--<img src="/assets/img/home-carousel-1.jpg">-->
+        <!--</div>-->
+        <!--<div class="swiper-slide">-->
+            <!--<img src="/assets/img/home-carousel-2.jpg">-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; Add Pagination &ndash;&gt;-->
+    <!--<div class="swiper-pagination"></div>-->
+<!--</div>-->
+<!-- /Swiper Home slider -->
+
+<!-- Materializecss Home slider -->
+<!--<div class="home slider unslider">-->
+    <!--<ul class="home">-->
+        <!--<li>-->
+            <!--<img src="/assets/img/home-carousel-1.jpg">-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<img src="/assets/img/home-carousel-2.jpg">-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!-- /Materializecss Home slider -->
+
+<!--<br>-->
+<!--<div id="top-banner" class="home owl-carousel owl-theme">-->
+    <!--<div class="item">-->
+        <!--<img src="/assets/img/home-carousel-1.jpg">-->
+    <!--</div>-->
+    <!--<div class="item">-->
+        <!--<img src="/assets/img/home-carousel-2.jpg">-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<section id="home-top-banner">-->
+    <!--<div class="owl-carousel home top-banner owl-theme owl-loaded owl-drag">-->
+        <!--<div class="owl-stage-outer owl-height" style="height: 675px;">-->
+            <!--<div class="owl-stage" style="width: 3810px;">-->
+                <!--<div class="owl-item active" style="width: 100%; margin: 0;">-->
+                    <!--<img src="/assets/img/home-carousel-1.jpg">-->
+                <!--</div>-->
+                <!--<div class="owl-item">-->
+                    <!--<img src="/assets/img/home-carousel-2.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="owl-controls">-->
+            <!--<div class="owl-nav">-->
+                <!--<div class="owl-prev">prev</div>-->
+                <!--<div class="owl-next">next</div>-->
+            <!--</div>-->
+            <!--<div class="owl-dots">-->
+                <!--<div class="owl-dot active"><span></span></div>-->
+                <!--<div class="owl-dot"><span></span></div>-->
+                <!--<div class="owl-dot"><span></span></div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+
+<!--<section id="home-top-banner">-->
+    <!--<div class="owl-carousel home top-banner owl-theme owl-loaded owl-drag">-->
+        <!--<div class="item">-->
+            <!--<img class="owl-lazy" data-src="/assets/img/home-carousel-1.jpg">-->
+        <!--</div>-->
+        <!--<div class="item">-->
+            <!--<img class="owl-lazy" data-src="/assets/img/home-carousel-2.jpg">-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+
+
+
+
+
 
 
 <div class="container-fullpage-arteetmarte shadown-top-z-level-1 shadown-bottom-z-level-1">
@@ -136,6 +251,11 @@
     <div class="container-arteetmarte">
 
         <div class="section">
+
+
+
+
+
 
             <!--   Icon Section   -->
             <div class="row">
@@ -252,6 +372,7 @@
 
 <!--  Scripts-->
 <script type="application/javascript" src="/assets/js/scripts.js"></script>
+
 
 
 </body>

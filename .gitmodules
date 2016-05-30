@@ -1,9 +1,12 @@
 [submodule "src/material-design-lite"]
 	path = src/material-design-lite
 	url = https://github.com/google/material-design-lite.git
-[submodule "third-party/OwnCarousel"]
-	path = third-party/OwnCarousel
-	url = git@github.com:OwlFonk/OwlCarousel.git
 [submodule "third-party/OwnCarousel2"]
 	path = third-party/OwnCarousel2
 	url = git@github.com:OwlCarousel2/OwlCarousel2.git
+[submodule "third-party/swiper"]
+	path = third-party/swiper
+	url = git@github.com:nolimits4web/Swiper.git
+[submodule "third-party/OwnCarousel"]
+	path = third-party/OwnCarousel
+	url = git@github.com:OwlFonk/OwlCarousel.git

@@ -16,8 +16,31 @@
  */
 
 /**
- * principal navbar on left top
+ * Custom Styles:
+ *
+ * Elements:
+ *
+ *  C.S.1. Top Principal Navbar in Home Page
+ *  C.S.2. Custom containers
+ *  C.S.3. Z-Levels and containers for sections full width
+ *  C.S.4.
+ *  C.S.5.
+ *  C.S.6.
+ *  C.S.7.
+ *  C.S.8.
+ *  C.S.10.
+ *  C.S.11.
+ *  C.S.12.
+ *  C.S.13.
+ *  C.S.14.
+ *  C.S.15.
+ *  C.S.16.
+ *  C.S.17.
  */
+
+
+/* C.S.1. Top Principal Navbar in Home Page
+   ========================================================================== */
 .nav-principal {
     float:left;
 }
@@ -70,14 +93,21 @@
     font-family: Cinzel, sans-serif;
     color: #f9d4d4;
 }
-.nav-principal .side-nav-principal ul,
-.nav-principal .side-nav-principal > li > a {
-    font-size:2rem;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, .65);
+.nav-principal .side-nav-principal > li > a,
+.nav-principal .side-nav-principal > li > ul {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
+}
+.nav-principal .side-nav-principal > li > a,
+.nav-principal .side-nav-principal > li > ul > span {
+    font-size:2rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, .65);
+}
+.nav-principal .side-nav-principal > li > ul > li > a {
+    font-size:1.75rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 .nav-principal .side-nav-principal > li > ul > span,
 .nav-principal .side-nav-principal > li > ul > li {
@@ -117,33 +147,54 @@
     }
 }
 @media only screen and (max-width: 320px) {
-    .nav-principal .side-nav-principal li a {
-        font-size: .7rem;
+    .nav-principal .side-nav-principal > li > a,
+    .nav-principal .side-nav-principal > li > ul > span {
+        font-size:.9rem;
+
+    }
+    .nav-principal .side-nav-principal > li > ul > li > a {
+        font-size:.8rem;
     }
 }
 @media only screen and (min-width: 321px) and (max-width: 480px) {
-    .nav-principal .side-nav-principal li a {
-        font-size: 1.1rem;
+    .nav-principal .side-nav-principal > li > a,
+    .nav-principal .side-nav-principal > li > ul > span {
+        font-size:1.1rem;
+
+    }
+    .nav-principal .side-nav-principal > li > ul > li > a {
+        font-size:1rem;
     }
 }
-@media only screen and (min-width: 481px) and (max-width: 601px) {
-    .nav-principal .side-nav-principal li a {
-        font-size: 1.4rem;
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    .nav-principal .side-nav-principal > li > a,
+    .nav-principal .side-nav-principal > li > ul > span {
+        font-size:1.4rem;
+
+    }
+    .nav-principal .side-nav-principal > li > ul > li > a {
+        font-size:1.2rem;
     }
 }
-@media only screen and (min-width: 602px) and (max-width: 800px) {
-    .nav-principal .side-nav-principal li a {
-        font-size: 1.6rem;
-        height: auto;
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    .nav-principal .side-nav-principal > li > a,
+    .nav-principal .side-nav-principal > li > ul > span {
+        font-size:1.6rem;
+
+    }
+    .nav-principal .side-nav-principal > li > ul > li > a {
+        font-size:1.4rem;
     }
 }
+
+/* C.S.2. Custom Containers
+   ========================================================================== */
 /**
  * Custom container for fullpage section with shadow z-depth
  */
 .container-fullpage-arteetmarte {
     width:100% !important;
 }
-
 /**
  * Custom container for sections with shadow z-depth
  */
@@ -166,12 +217,12 @@
         width: 100%;
     }
 }
-
 .container-arteetmarte .row {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
 }
-
+/* C.S.3. Z-Levels and containers for sections full width
+   ========================================================================== */
 /* Z-levels only top or only button shadows
  none|h-shadow v-shadow blur spread color
  */
@@ -217,3 +268,72 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 */
+/* C.S.3. Home swiper slider
+   ========================================================================== */
+/*.swiper-container {*/
+    /*position:absolute;*/
+    /*top:0px;*/
+    /*left:0px;*/
+    /*width: 100%;*/
+    /*height:578px;*/
+
+/*}*/
+/*.swiper-slide {*/
+    /*text-align: center;*/
+    /*font-size: 18px;*/
+    /*background: #fff;*/
+    /*/!* Center slide text vertically *!/*/
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+    /*-webkit-box-pack: center;*/
+    /*-ms-flex-pack: center;*/
+    /*-webkit-justify-content: center;*/
+    /*justify-content: center;*/
+    /*-webkit-box-align: center;*/
+    /*-ms-flex-align: center;*/
+    /*-webkit-align-items: center;*/
+    /*align-items: center;*/
+/*}*/
+/*.home.slider.unslider {*/
+    /*position:absolute;*/
+    /*top:0px;*/
+    /*left:0px;*/
+/*}*/
+
+/* C.S.3. Home swiper slider
+   ========================================================================== */
+
+.responsive-swiper-container {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.home.top-carousel.swiper-container {
+    /*width: 100%;*/
+    /*height: 586px;*/
+    position: relative;
+    top: -64px;
+}
+.home.top-carousel.swiper-slide {}
+.home.top-carousel.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+}
+.home.top-carousel.swiper-pagination .swiper-pagination-bullet {
+    background: #fff;
+    opacity:.25;
+    box-shadow: 2px 2px 2px 1px rgba(131, 19, 20, .85);
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(131, 19, 20, .85);
+    -moz-box-shadow: 2px 2px 2px 1px rgba(131, 19, 20, .85);
+}
+.home.top-carousel.swiper-pagination .swiper-pagination-bullet-active {
+    opacity:1;
+}
+.home.top-carousel.swiper-button-next,
+.home.top-carousel.swiper-button-prev {
+    background-color: #E12F31;
+    padding: 1.5rem;
+}

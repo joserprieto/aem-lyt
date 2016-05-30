@@ -132,13 +132,21 @@ var basePaths =
         {
             src     : basePaths.assets.src + 'css/',
             dest    : basePaths.assets.dest + 'css/'
+        },
+        vendor:
+        {
+            src     : basePaths.assets.src + 'vendor/',
+            dest    : basePaths.assets.dest + 'vendor/'
         }
     },
     appFiles =
     {
         html        : paths.html.src  + '**/*.+(html|htm)',
         sassStyles  : paths.sassStyles.src + '**/*.+(scss|sass)',
-        cssStyles   : paths.cssStyles.src + '**/*.css',
+        cssStyles   :
+            [
+                paths.cssStyles.src + '**/*.css'
+            ],
         jSscripts   :
             [
                 paths.jSscripts.src + '**/*.js'
@@ -152,24 +160,62 @@ var basePaths =
     jsJQuery =
         basePaths.assets.bower + 'jquery/dist/' +
             (isProduction?'jquery.min.js':'jquery.js'),
-    // vendor files:
+    // Swipe
+    cssSwiper =
+        basePaths.assets.bower + 'Swiper/dist/css/' +
+                (isProduction?'swiper.min.css':'swiper.css'),
+    jsSwiper =
+        basePaths.assets.bower + 'Swiper/dist/js/' +
+                    (isProduction?'swiper.min.js':'swiper.js'),
+    // Unslider
+    cssUnslider=
+        basePaths.assets.bower + 'unslider/dist/css/**/*.css' +
+            (isProduction?'swipper.min.css':'swipper.css'),
+    jsUnslider =
+        (isProduction?
+            (basePaths.assets.bower + 'unslider/dist/js/**/*.js'):
+                (basePaths.assets.bower + 'unslider/src/js/**/*.js')),
+    jsUnslider =
+        (isProduction?
+            (basePaths.assets.bower + 'unslider/dist/js/**/*.js'):
+            (basePaths.assets.bower + 'unslider/src/js/**/*.js')),
+    // OwnCarousel
+    cssOwnCarouselBase =
+        basePaths.assets.bower + 'owl.carousel/dist/assets/' +
+            (isProduction?'owl.carousel.min.css':'owl.carousel.css'),
+    cssOwnCarouselTheme =
+        basePaths.assets.bower + 'owl.carousel/dist/assets/' +
+            (isProduction?'owl.theme.default.min.css':'own.theme.default.css'),
+    jsOwnCarousel =
+        basePaths.assets.bower + 'owl.carousel/dist/' +
+            (isProduction?'owl.carousel.min.js':'owl.carousel.js'),
+    // OwnCarousel2
+    cssOwnCarouselBase =
+        basePaths.assets.bower + 'owl.carousel/dist/assets/' +
+        (isProduction?'owl.carousel.min.css':'owl.carousel.css'),
+    cssOwnCarouselTheme =
+        basePaths.assets.bower + 'owl.carousel/dist/assets/' +
+        (isProduction?'owl.theme.default.min.css':'own.theme.default.css'),
+    jsOwnCarousel =
+        basePaths.assets.bower + 'owl.carousel/dist/' +
+        (isProduction?'owl.carousel.min.js':'owl.carousel.js'),
     vendorFiles =
     {
         cssStyles:
             [
-
+                cssSwiper
             ],
         jSscripts:
             [
                 jsJQuery,
-                jsMaterialize
+                jsMaterialize,
+                jsSwiper
             ]
     };
 
 // Variables dependent of --dev
 
 var cssDestFileName     = isProduction?'styles.min.css':'styles.css',
-    cssSassDestFileName = isProduction?'sass-styles.min.css':'sass-styles.css',
     jsFDestFileName     = isProduction?'scripts.min.js':'scripts.js';
 
 
@@ -249,9 +295,8 @@ gulp.task('copy-icons', function() {
         )
         .pipe(gulpif(!isProduction, debug({title: 'copy-icons:'})))
         .pipe(
-            gulp.dest(paths.fonts.dest
-        )
-    );
+            gulp.dest(paths.icons.dest)
+        );
 });
 
 /**
@@ -336,6 +381,7 @@ gulp.task('build-js', function() {
         jsSources   = new Array();
 
     jsSources = vendorFiles.jSscripts.concat(appFiles.jSscripts);
+
     gulp.src(jsSources)
         .pipe(gulpif(!isProduction, debug({title: 'build-js:'})))
         .pipe(gulpif(!isProduction, sourcemaps.init()))  // Process the original sources
@@ -370,8 +416,6 @@ gulp.task('build-css', function() {
         cssSources          = appFiles.cssStyles.concat(vendorFiles.cssStyles),
         sassSources         = appFiles.sassStyles,
         sassResult;
-
-
 
     sassResult = gulp.src(sassSources)
                     .pipe(gulpif(!isProduction, debug({title: 'build-css; building sass:'})))

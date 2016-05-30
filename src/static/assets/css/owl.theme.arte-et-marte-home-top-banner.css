@@ -1,0 +1,104 @@
+/**************************************************************************
+ * Copyleft joserprieto - Some Rights Reserved
+ *
+ * joserprieto
+ *
+ *
+ * @file        owl.theme.arte-et-marte-home.css
+ * @author      joserprieto
+ * @date        30/05/16 10:04
+ * @project     Arte et Marte Layout
+ * @projectCode AEM-LYT
+ * @site        http://preview.arteetmarte.org
+ * @repo        git@bitbucket.org:joserprieto-team/aem-lyt.git
+ *
+ * @type        css
+ */
+
+
+/**
+ * Owl Carousel v2.1.4
+ * Copyright 2013-2016 David Deutsch
+ * Licensed under MIT (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE)
+ */
+/*
+ * 	Arte Et Marte Home Top Banner Carousel - Owl Carousel CSS File
+ */
+/* Container of Carousel: */
+.owl-carousel.home.top-banner {
+
+}
+/*.owl-carousel.home.top-banner .owl-stage:before {*/
+    /*content: ".";*/
+    /*display: block;*/
+    /*clear: both;*/
+    /*visibility: hidden;*/
+    /*line-height: 0;*/
+    /*height: 0;*/
+/*}*/
+/* Container of item of the Carousel: */
+.owl-carousel.home.top-banner .owl-item {
+    margin-top: -64px !important;
+}
+@media only screen and (max-width: 600px) {
+    .owl-carousel.home.top-banner .owl-item {
+        margin-top: -56px !important;
+    }
+}
+/*
+$navbar-height: 64px !default;
+$navbar-height-mobile: 56px !default;
+*/
+
+/* Container of Navigation: */
+.top-banner.home.owl-theme .owl-nav {
+    margin: 0;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+.top-banner.home.owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.top-banner.home.owl-theme .owl-nav [class*='owl-']:hover {
+    background: #869791;
+    color: #FFF;
+    text-decoration: none;
+}
+.top-banner.home.owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.top-banner.home.owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+}
+.top-banner.home.owl-theme .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+.top-banner.home.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.top-banner.home.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+}
+.top-banner.home.owl-theme .owl-dots .owl-dot.active span,
+.top-banner.home.owl-theme .owl-dots .owl-dot:hover span {
+    background: #869791;
+}
