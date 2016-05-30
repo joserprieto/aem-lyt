@@ -15,95 +15,104 @@ $(document).ready(function() {
     $('.parallax').parallax();
 
     /**
-     * Init top slider:
+     * Init top slider Swiper:
      */
 
-    var arteEtMarteHomeTopBannerSlider =
-        $('.home.top-carousel.slider').arteEtMarteSlider(
-            {
-                full_width              : true,
-                indicatorsOverSlides    : true,
-                height                  : 576
+    if ($('body').hasClass('home')) {
+        var time = 7, // time between slides, in seconds
+            progressBar,
+            bar,
+            elem = $('.home.top-carousel.swiper-container'),
+            isPause,
+            tick,
+            percentTime,
+            homeTopSwiperBanner;
+        //Init the carousel
+        homeTopSwiperBanner =
+            new Swiper(
+                '.home.top-carousel.swiper-container',
+                {
+                    pagination: '.swiper-pagination',
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+                    paginationClickable: true,
+                    spaceBetween: 1,
+                    centeredSlides: true,
+                    loop: true,
+                    // Disable preloading of all images
+                    preloadImages: false,
+                    // Enable lazy loading
+                    lazyLoading: true,
+                    onInit: initProgressBar,
+                    onSlideChangeEnd: moved,
+                    onTouchStart: pauseOnDragging,
+                    onTouchEnd: continueAfterDragging
+                }
+            );
+        //Init progressBar where elem is $("#owl-demo")
+        function initProgressBar(){
+            //elem = _elem;
+            //build progress bar elements
+            buildProgressBar();
+            //start counting
+            start();
+        }
+        //create div#progressBar and div#bar then prepend to $("#owl-demo")
+        function buildProgressBar(){
+            progressBar =
+                $("<div>",
+                    {
+                        class:"home progressBar",
+                    }
+                );
+            bar =
+                $("<div>",
+                    {
+                        class:"home bar"
+                    }
+                );
+            progressBar.append(bar).prependTo(elem);
+        }
+        function start() {
+            //reset timer
+            percentTime = 0;
+            isPause = false;
+            //run interval every 0.01 second
+            tick = setInterval(interval, 10);
+        };
+        function interval() {
+            if(isPause === false){
+                percentTime += 1 / time;
+                bar.css({
+                    width: percentTime+"%"
+                });
+                //if percentTime is equal or greater than 100
+                if(percentTime >= 100){
+                    //slide to next item
+                    homeTopSwiperBanner.slideNext();
+
+                }
             }
-        );
-    console.log(arteEtMarteHomeTopBannerSlider);
-    console.log(arteEtMarteHomeTopBannerSlider.methods);
-    //arteEtMarteHomeTopBannerSlider.trigger('sliderPause');
+        }
+        //pause while dragging
+        function pauseOnDragging(){
+            isPause = true;
+        }
+        //continue after dragging
+        function continueAfterDragging(){
+            isPause = false;
+        }
+        //moved callback
+        function moved(){
+            //clear interval
+            clearTimeout(tick);
+            //start again
+            start();
+        }
+
+    }
 
 
-
-//        },
-//        pause : function() {
-//        $(this).trigger('sliderPause');
-//    },
-//    start : function() {
-//        $(this).trigger('sliderStart');
-//    },
-//    next : function() {
-//        $(this).trigger('sliderNext');
-//    },
-//    prev : function() {
-//        $(this).trigger('sliderPrev');
-//    }
-//};
-    $(window)
-        .on({
-            resize: function() {
-                var width = window.width,
-                    height = window.height,
-                    topBanner = $('.home.top-carousel.slider');
-                //if (width >= )
-                console.log('resized!');
-            }
-        });
-
-    <!-- Initialize Swiper -->
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 30,
-        effect: 'fade'
-    });
-
-    /*
-     <div class="home top-carousel slider" style="height: 618px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-     <ul class="home slides" style="height: 578px;">
-     <li class="velocity-animating active" style="opacity: 0.991917; transform: translateX(0px) translateY(0px);">
-     <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="background-image: url(&quot;/assets/img/home-carousel-1.jpg&quot;);">
-     </li>
-     <li class="velocity-animating" style="opacity: 0.00808256; transform: translateX(0px) translateY(0px);">
-     <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="background-image: url(&quot;/assets/img/home-carousel-2.jpg&quot;);">
-     </li>
-     </ul>
-     <ul class="indicators">
-     <li class="indicator-item active"></li>
-     <li class="indicator-item"></li>
-     </ul>
-     </div>
-
-     */
-    //var swiper = new Swiper('.swiper-container', {
-    //    direction: 'horizontal',
-    //    loop: true,
-    //    // If we need paginationi
-    //    pagination: '.swiper-pagination',
-    //    // Navigation arrows
-    //    nextButton: '.swiper-button-next',
-    //    prevButton: '.swiper-button-prev',
-    //    // And if we need scrollbar
-    //    scrollbar: '.swiper-scrollbar',
-    //});
-
-    //$(".home.top-banner.owl-carousel").owlCarousel({
-    //    loop        : true,
-    //    margin      : 0,
-    //    nav         : true,
-    //    autoHeight  : true,
-    //    lazyLoad    : true,
-    //    items       : 1
-    //});
 });// end of document ready
 /**
  * /init.js
