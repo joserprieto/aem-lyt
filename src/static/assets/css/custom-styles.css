@@ -22,8 +22,8 @@
  *
  *  C.S.1. Top Principal Navbar in Home Page
  *  C.S.2. Custom containers
- *  C.S.3. Z-Levels and containers for sections full width
- *  C.S.4.
+ *  C.S.3. Z-Levels and containers for sections full width and its shadows
+ *  C.S.4. Home swiper slider
  *  C.S.5.
  *  C.S.6.
  *  C.S.7.
@@ -43,6 +43,9 @@
    ========================================================================== */
 .nav-principal {
     float:left;
+    height:0px;
+    width:0px;
+    line-height:0px;
 }
 .nav-principal a.button-collapse {
     z-index:100;
@@ -194,6 +197,11 @@
  */
 .container-fullpage-arteetmarte {
     width:100% !important;
+    height:auto;
+    margin:0;
+    padding:0;
+    z-index:20;
+    background-color: #fff;
 }
 /**
  * Custom container for sections with shadow z-depth
@@ -202,21 +210,22 @@
     margin: 0 auto;
     max-width:1600px;
     width: 100%;
+    z-index:21;
 }
-@media only screen and (min-width: 601px) {
-    .container-arteetmarte {
-        margin: 0 auto;
-        max-width:1600px;
-        width: 100%;
-    }
-}
-@media only screen and (min-width: 993px) {
-    .container-arteetmarte {
-        margin: 0 auto;
-        max-width:1600px;
-        width: 100%;
-    }
-}
+/*@media only screen and (min-width: 601px) {*/
+    /*.container-arteetmarte {*/
+        /*margin: 0 auto;*/
+        /*max-width:1600px;*/
+        /*width: 100%;*/
+    /*}*/
+/*}*/
+/*@media only screen and (min-width: 993px) {*/
+    /*.container-arteetmarte {*/
+        /*margin: 0 auto;*/
+        /*max-width:1600px;*/
+        /*width: 100%;*/
+    /*}*/
+/*}*/
 .container-arteetmarte .row {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
@@ -227,6 +236,28 @@
  none|h-shadow v-shadow blur spread color
  */
 
+.container-fullpage-arteetmarte:before {
+    content: ' ';
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 10px;
+    top: -10px;
+    z-index: 20;
+    margin-top: -6px;
+    background: url('/assets/img/shadow-up.png') bottom repeat-x;
+}
+.container-fullpage-arteetmarte:after {
+    content: ' ';
+    position:relative;
+    display:block;
+    width:100%;
+    height:10px;
+    bottom: -10px;
+    z-index: 20;
+    margin-bottom:-6px;
+    background:url('/assets/img/shadow-down.png') top repeat-x;
+}
 
 /*
 
@@ -258,18 +289,25 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 */
-/* C.S.3. Home swiper slider
+/* C.S.4. Home swiper slider
    ========================================================================== */
-.responsive-swiper-container {
-    min-width: 100%;
-    max-width: 100%;
-    height: auto;
-}
 .home.top-carousel.swiper-container {
     /*width: 100%;*/
     /*height: 586px;*/
     position: relative;
-    top: -64px;
+    margin:0;
+    padding:0;
+}
+/*.home.top-carousel.swiper-container:after {*/
+    /*content: ' ';*/
+    /*position:relative;*/
+    /*display:block;*/
+    /*clear:both;*/
+/*}*/
+.responsive-swiper-container {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 .home.top-carousel.swiper-slide {}
 .home.top-carousel.swiper-container-horizontal > .swiper-pagination-bullets {
