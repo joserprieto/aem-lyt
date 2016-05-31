@@ -85,8 +85,8 @@ var basePaths =
     {
         html:
         {
-            src     : 'src/static/',
-            dest    : 'web/'
+            src         : 'src/static/',
+            dest        : 'web/'
         },
         assets:
         {
@@ -94,7 +94,8 @@ var basePaths =
             dest    : 'web/assets/',
             bower   : 'bower_components/',
             node    : 'node_modules/'
-        }
+        },
+        thirdParty  : 'third-party/'
     },
     paths =
     {
@@ -179,37 +180,39 @@ var basePaths =
         (isProduction?
             (basePaths.assets.bower + 'unslider/dist/js/**/*.js'):
             (basePaths.assets.bower + 'unslider/src/js/**/*.js')),
-    // OwnCarousel
-    cssOwnCarouselBase =
+    // OwlCarousel
+    cssOwlCarouselBase =
         basePaths.assets.bower + 'owl.carousel/dist/assets/' +
             (isProduction?'owl.carousel.min.css':'owl.carousel.css'),
-    cssOwnCarouselTheme =
+    cssOwlCarouselTheme =
         basePaths.assets.bower + 'owl.carousel/dist/assets/' +
             (isProduction?'owl.theme.default.min.css':'own.theme.default.css'),
-    jsOwnCarousel =
+    jsOwlCarousel =
         basePaths.assets.bower + 'owl.carousel/dist/' +
             (isProduction?'owl.carousel.min.js':'owl.carousel.js'),
     // OwnCarousel2
-    cssOwnCarouselBase =
-        basePaths.assets.bower + 'owl.carousel/dist/assets/' +
-        (isProduction?'owl.carousel.min.css':'owl.carousel.css'),
-    cssOwnCarouselTheme =
-        basePaths.assets.bower + 'owl.carousel/dist/assets/' +
-        (isProduction?'owl.theme.default.min.css':'own.theme.default.css'),
-    jsOwnCarousel =
-        basePaths.assets.bower + 'owl.carousel/dist/' +
-        (isProduction?'owl.carousel.min.js':'owl.carousel.js'),
+    cssOwlCarousel2Base =
+        basePaths.thirdParty + 'OwlCarousel2/dist/assets/' +
+            (isProduction?'owl.carousel.min.css':'owl.carousel.css'),
+    cssOwlCarousel2Theme =
+        basePaths.thirdParty + 'OwlCarousel2/dist/assets/' +
+            (isProduction?'owl.theme.default.min.css':'own.theme.default.css'),
+    jsOwlCarousel2 =
+        basePaths.thirdParty + 'OwlCarousel2/dist/' +
+            (isProduction?'owl.carousel.min.js':'owl.carousel.js'),
     vendorFiles =
     {
         cssStyles:
             [
-                cssSwiper
+                cssSwiper,
+                cssOwlCarousel2Base
             ],
         jSscripts:
             [
                 jsJQuery,
                 jsMaterialize,
-                jsSwiper
+                jsSwiper,
+                jsOwlCarousel2
             ]
     };
 

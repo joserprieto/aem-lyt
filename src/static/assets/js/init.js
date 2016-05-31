@@ -36,9 +36,9 @@ $(document).ready(function() {
             new Swiper(
                 '.home.top-carousel.swiper-container',
                 {
-                    pagination: '.swiper-pagination',
-                    nextButton: '.swiper-button-next',
-                    prevButton: '.swiper-button-prev',
+                    pagination: '.home.top-carousel.swiper-pagination',
+                    nextButton: '.home.top-carousel.swiper-button-next',
+                    prevButton: '.home.top-carousel.swiper-button-prev',
                     paginationClickable: true,
                     spaceBetween: 1,
                     centeredSlides: true,
@@ -53,8 +53,6 @@ $(document).ready(function() {
                     onTouchEnd: continueAfterDragging
                 }
             );
-        // @TODO: change time for precision; to take 7 seconds, not depended of timeOut.
-        //Init progressBar where elem is $("#owl-demo")
         function initProgressBar(){
             //reset timer
             timeBetweenSlides = 8;
@@ -133,6 +131,27 @@ $(document).ready(function() {
             start();
         }
 
+        /**
+         * Owl Carousel of Groups:
+         */
+        $('.home.groups-carousel.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            dot: true,
+            autoplay: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
     }
 
 
