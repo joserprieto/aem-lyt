@@ -24,7 +24,7 @@
  *  C.S.2. Custom containers
  *  C.S.3. Z-Levels and containers for sections full width and its shadows
  *  C.S.4. Home swiper slider
- *  C.S.5.
+ *  C.S.5. Hn tags
  *  C.S.6.
  *  C.S.7.
  *  C.S.8.
@@ -39,8 +39,9 @@
  */
 
 
-/* C.S.1. Top Principal Navbar in Home Page
+/* C.S.1. General CSS Styles Top Principal Navbar in Home Page
    ========================================================================== */
+/* C.S.1.1. Top Principal Navbar in Home Page */
 .nav-principal {
     float:left;
     height:0px;
@@ -189,9 +190,7 @@
         font-size:1.4rem;
     }
 }
-
-/* C.S.2. Custom Containers
-   ========================================================================== */
+/* C.S.1.2. Custom Containers */
 /**
  * Custom container for fullpage section with shadow z-depth
  */
@@ -212,30 +211,16 @@
     width: 100%;
     z-index:21;
 }
-/*@media only screen and (min-width: 601px) {*/
-    /*.container-arteetmarte {*/
-        /*margin: 0 auto;*/
-        /*max-width:1600px;*/
-        /*width: 100%;*/
-    /*}*/
-/*}*/
-/*@media only screen and (min-width: 993px) {*/
-    /*.container-arteetmarte {*/
-        /*margin: 0 auto;*/
-        /*max-width:1600px;*/
-        /*width: 100%;*/
-    /*}*/
-/*}*/
+@media only screen and (max-width: 1559px) {
+    .container-arteetmarte {
+        width: 90%;
+    }
+}
 .container-arteetmarte .row {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
 }
-/* C.S.3. Z-Levels and containers for sections full width
-   ========================================================================== */
-/* Z-levels only top or only button shadows
- none|h-shadow v-shadow blur spread color
- */
-
+/* C.S.1.3. Z-Levels and containers for sections full width */
 .container-fullpage-arteetmarte:before {
     content: ' ';
     position: relative;
@@ -257,6 +242,43 @@
     z-index: 20;
     margin-bottom:-6px;
     background:url('/assets/img/shadow-down.png') top repeat-x;
+}
+
+/* C.S.1.4. Hn tags */
+h1, h2, h3, h4 {
+    font-family: CaesarRegular, sans-serif;
+}
+h1.marvel,
+h2.marvel,
+h3.marvel,
+h4.marvel {
+    font-family: Marvel, sans-serif;
+}
+
+/* C.S.1.5. Material icons */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-60 { font-size: 60px; }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* C.S.1.6. Helper css class for colours */
+
+/* C.S.1.7. Parallax CSS class */
+.parallax-container h1,
+.parallax-container h2,
+.parallax-container h3,
+.parallax-container h4,
+.parallax-container h5 {
+    font-family:Cinzel, sans-serif;
+    color: #fff;
+    text-shadow: 3px 3px 4px rgba(121, 85, 72, .85);
 }
 
 /*
@@ -289,8 +311,11 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 */
-/* C.S.4. Home swiper slider
+/* C.S.2. Home styles.
+
+swiper slider
    ========================================================================== */
+/* C.S.2.1. Swiper slider */
 .home.top-carousel.swiper-container {
     /*width: 100%;*/
     /*height: 586px;*/
@@ -339,4 +364,158 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 .home.progressBar{
     width: 100%;
     background: #fff;
+}
+/* C.S.2.2. Logo on presentation */
+#presentation .logo-arte-et-marte {
+    width:15rem;
+    height:auto;
+}
+@media only screen and (min-width: 360px) {
+    #presentation .logo-arte-et-marte {
+        width:5rem;
+    }
+}
+@media only screen and (min-width: 480px) {
+    #presentation .logo-arte-et-marte {
+        width:7rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #presentation .logo-arte-et-marte {
+        width:9rem;
+    }
+}
+@media only screen and (min-width: 780px) {
+    #presentation .logo-arte-et-marte {
+        width:10rem;
+    }
+}
+@media only screen and (min-width: 900px) {
+    #presentation .logo-arte-et-marte {
+        width:11rem;
+    }
+}
+@media only screen and (min-width: 960px) {
+    #presentation .logo-arte-et-marte {
+        width:12rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #presentation .logo-arte-et-marte {
+        width:13rem;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    #presentation .logo-arte-et-marte {
+        width:14rem;
+    }
+}
+@media only screen and (max-width: 360px) {
+    #presentation .logo-arte-et-marte {
+        width:4rem;
+    }
+}
+
+
+
+
+/* C.S.9. News items css class
+========================================================================== */
+.news-item img.activator:after {
+    content:'';
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: blue;
+    opacity: 0.1;
+}
+.news-item img.activator:hover:after {
+    opacity: 0;
+}
+/*{*/
+    /*background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");*/
+    /*background-color: rgba(0,0,0,0.5);*/
+    /*height: 100%;*/
+    /*width:100%;*/
+    /*z-index:100;*/
+/*}*/
+
+
+
+
+
+
+/**
+ * Media Materialize for flow-text
+ */
+@media only screen and (min-width: 360px) {
+
+}
+@media only screen and (min-width: 390px) {
+
+}
+@media only screen and (min-width: 420px) {
+
+}
+@media only screen and (min-width: 450px) {
+
+}
+@media only screen and (min-width: 480px) {
+
+}
+@media only screen and (min-width: 510px) {
+
+}
+@media only screen and (min-width: 540px) {
+
+}
+@media only screen and (min-width: 570px) {
+
+}
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (min-width: 630px) {
+
+}
+@media only screen and (min-width: 660px) {
+
+}
+@media only screen and (min-width: 690px) {
+
+}
+@media only screen and (min-width: 720px) {
+
+}
+@media only screen and (min-width: 750px) {
+
+}
+@media only screen and (min-width: 780px) {
+
+}
+@media only screen and (min-width: 810px) {
+
+}
+@media only screen and (min-width: 840px) {
+
+}
+@media only screen and (min-width: 870px) {
+
+}
+@media only screen and (min-width: 900px) {
+
+}
+@media only screen and (min-width: 930px) {
+
+}
+@media only screen and (min-width: 960px) {
+
+}
+@media only screen and (max-width: 360px) {
+
+
 }

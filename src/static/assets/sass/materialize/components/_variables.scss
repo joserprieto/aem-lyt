@@ -27,6 +27,7 @@
  *  22. Flow Text
  *  23. Collections
  *  24. Progress Bar
+ *  25. Material Design Icons sizes
  */
 
 
@@ -190,12 +191,15 @@ $switch-radius: 15px !default;
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;
 $large-screen-up: 1201px !default;
+$xlarge-screen-up: 1601px !default;
 $small-screen: 600px !default;
 $medium-screen: 992px !default;
 $large-screen: 1200px !default;
+$xlarge-screen: 1600px !default;
 
 $medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
 $large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$xlarge-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
 $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
@@ -272,12 +276,12 @@ $toast-text-color: #fff !default;
 
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
-$h1-fontsize: 4.2rem !default;
-$h2-fontsize: 3.56rem !default;
-$h3-fontsize: 2.92rem !default;
-$h4-fontsize: 2.28rem !default;
-$h5-fontsize: 1.64rem !default;
-$h6-fontsize: 1rem !default;
+$h1-fontsize: 3.2rem !default;
+$h2-fontsize: 2.9rem !default;
+$h3-fontsize: 2.6rem !default;
+$h4-fontsize: 2.2rem !default;
+$h5-fontsize: 1.9rem !default;
+$h6-fontsize: 1.5rem !default;
 
 
 /* 21. Footer
@@ -309,3 +313,25 @@ $collection-link-color: $secondary-color !default;
    ========================================================================== */
 
 $progress-bar-color: $secondary-color !default;
+
+/* 25. Material Design Icons sizes:
+   ========================================================================== */
+
+$mi-tiny: 1rem !default;
+$mi-small: 2rem !default;
+$mi-medium: 4rem !default;
+$mi-large: 6rem !default;
+$mi-xlarge: 8rem !default;
+
+/* 26. Tags hN responsive CSS class intervals and params:
+   ========================================================================== */
+
+$range-hN-responsive : $xlarge-screen - 480 !default;
+$intervals-hN-responsive: 14 !default;
+$increment-width-hN-responsive: $range-hN-responsive / $intervals-hN-responsive !default;
+$h1-min-fontsize: 2.1rem !default;
+$h2-min-fontsize: 2rem !default;
+$h3-min-fontsize: 1.9rem !default;
+$h4-min-fontsize: 1.8rem !default;
+$h5-min-fontsize: 1.7rem !default;
+$h6-min-fontsize: 1.6rem !default;

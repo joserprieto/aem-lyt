@@ -36,6 +36,33 @@ h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($
 h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;}
 h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}
 
+h1.h1-responsive {
+  $i: 0;
+  $increment-in-font-size: ($h1-fontsize - $h1-min-fontsize) / $intervals-hN-responsive;
+  @while $i <= $intervals-hN-responsive {
+    $font-size-value: $h1-min-fontsize + ($i * $increment-in-font-size);
+    @media only screen and (min-width : 480 + ($i * $increment-width-hN-responsive)) {
+      font-size: $font-size-value; line-height: 110%; margin: ($font-size-value / 2) 0 ($font-size-value / 2.5) 0;
+    }
+    $i: $i + 1;
+  }
+}
+h2.h2-responsive {
+  $i: 0;
+  $increment-in-font-size: ($h2-fontsize - $h2-min-fontsize) / $intervals-hN-responsive;
+  @while $i <= $intervals-hN-responsive {
+    $font-size-value: $h1-min-fontsize + ($i * $increment-in-font-size);
+    @media only screen and (min-width : 480 + ($i * $increment-width-hN-responsive)) {
+      font-size: $font-size-value; line-height: 110%; margin: ($font-size-value / 2) 0 ($font-size-value / 2.5) 0;
+    }
+    $i: $i + 1;
+  }
+  $font-size-value: $h1-min-fontsize;
+  @media only screen and (max-width : 480px) {
+    font-size: $font-size-value; line-height: 110%; margin: ($font-size-value / 2) 0 ($font-size-value / 2.5) 0;
+  }
+}
+
 // Text Styles
 em { font-style: italic; }
 strong { font-weight: 500; }
