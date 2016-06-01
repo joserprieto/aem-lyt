@@ -16,19 +16,6 @@
  */
 
 
-nav ul a,
-nav .brand-logo {
-    color: #444;
-}
-
-p {
-    line-height: 2rem;
-}
-
-.button-collapse {
-    color: #26a69a;
-}
-
 .parallax-container {
     min-height: 380px;
     line-height: 0;
@@ -55,13 +42,11 @@ p {
     }
 }
 
-.icon-block {
-    padding: 0 15px;
+.parallax-container.height-480 {
+    height: 480px;
+    max-height: 480px;
 }
-.icon-block .material-icons {
-    font-size: inherit;
-}
-
-footer.page-footer {
-    margin: 0;
+.parallax-container.height-300 {
+    height: 300px;
+    max-height: 300px;
 }

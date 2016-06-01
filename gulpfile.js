@@ -209,7 +209,6 @@ var basePaths =
             ],
         jSscripts:
             [
-                jsJQuery,
                 jsMaterialize,
                 jsSwiper,
                 jsOwlCarousel2
