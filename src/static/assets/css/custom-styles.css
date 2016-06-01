@@ -39,8 +39,13 @@
  */
 
 
-/* C.S.1. General CSS Styles Top Principal Navbar in Home Page
+/* C.S.1. General CSS Styles
    ========================================================================== */
+
+body {
+    /* Put bg color of body on the "accent" color of this Materialize Palette: */
+    background-color: rgba(121,85,72,1);
+}
 /* C.S.1.1. Top Principal Navbar in Home Page */
 .nav-principal {
     float:left;
@@ -221,7 +226,7 @@
     margin-right: -0.75rem;
 }
 /* C.S.1.3. Z-Levels and containers for sections full width */
-.container-fullpage-arteetmarte:before {
+.container-fullpage-arteetmarte.shadown-top-z-level-1:before {
     content: ' ';
     position: relative;
     display: block;
@@ -229,10 +234,9 @@
     height: 10px;
     top: -10px;
     z-index: 20;
-    margin-top: -6px;
-    background: url('/assets/img/shadow-up.png') bottom repeat-x;
+    background: url('/assets/img/shadow-top.png') bottom repeat-x;
 }
-.container-fullpage-arteetmarte:after {
+.container-fullpage-arteetmarte.shadown-bottom-z-level-1:after {
     content: ' ';
     position:relative;
     display:block;
@@ -240,8 +244,7 @@
     height:10px;
     bottom: -10px;
     z-index: 20;
-    margin-bottom:-6px;
-    background:url('/assets/img/shadow-down.png') top repeat-x;
+    background:url('/assets/img/shadow-bottom.png') top repeat-x;
 }
 
 /* C.S.1.4. Hn tags */
@@ -340,40 +343,105 @@ h4.marvel {
 .card-width-50-percent {
     width:50% !important;
 }
-
-/*
-
-// Z-levels
-.z-depth-0 {
-  box-shadow: none !important;
+/* C.S.1.9. Footer */
+.footer.logo-arte-et-marte,
+.footer.logo-legio-IIII-macedonica {
+    width:100%;
+    height:auto;
 }
-.z-depth-1{
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+.footer.event-data,
+.footer.organizer
+{
+    color: rgba(255,255,255,.7);
+    text-align:justify;
 }
-.z-depth-1-half{
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+.footer.event-data a,
+.footer.organizer a,
+.footer.footer-copyright a
+{
+    color: rgba(244,67,54,.7);
 }
-.z-depth-2{
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.footer.event-data a:hover,
+.footer.organizer a:hover,
+.footer.footer-copyright a:hover
+{
+    color: rgba(244,67,54,1);
+}
+.footer.event-data h5,
+.footer.sitemap h5,
+.footer.organizer h5
+{
+    font-size:2.2rem;
+    color: rgba(255,255,255,.8);
+}
+/* SiteMap */
+ul.footer.ul-sitemap,
+ul.footer.ul-sitemap > li,
+ul.footer.ul-sitemap > li > a
+{
+    color: rgba(255,255,255,.85);
+    font-size:1.4rem;
+}
+ul.footer.ul-sitemap > li > a:hover
+{
+    color: rgba(244,67,54,.85);
+}
+ul.footer.ul-sitemap > ul,
+ul.footer.ul-sitemap > ul > li,
+ul.footer.ul-sitemap > li > ul > li > a,
+ul.footer.ul-sitemap > li > li,
+ul.footer.ul-sitemap > li > li > a
+{
+    color: rgba(255,255,255,.7) !important;
+    font-size:1.3rem !important;
+}
+ul.footer.ul-sitemap > li > ul > li > a:hover,
+ul.footer.ul-sitemap > li > li > a:hover
+{
+    color: rgba(244,67,54,.7) !important;
+}
+ul.footer.ul-sitemap > ul,
+ul.footer.ul-sitemap > li > ul
+{
+    margin-left:2rem;
+}
+ul.footer.ul-sitemap hr {
+    width: 80%;
+    color: rgba(255,255,255,.25);
+    background-color: rgba(255,255,255,.25);
+    padding: 0;
+    margin: 1.5rem auto;
 }
 
-// Media Query Ranges
-$small-screen-up: 601px !default;
-$medium-screen-up: 993px !default;
-$large-screen-up: 1201px !default;
-$small-screen: 600px !default;
-$medium-screen: 992px !default;
-$large-screen: 1200px !default;
+/*  C.S.1.9.2. Social Links */
+ul.footer.social-links {
+    line-height:4rem;
+    vertical-align: baseline;
+}
+ul.footer.social-links:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ul.footer.social-links li {
+    float:left;
+    margin-right: 3rem;
+    color: rgba(255,205,210,.4);
+}
+ul.footer.social-links li .social-link {
+    color: rgba(255,205,210,.25);
+}
 
-$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
-$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
-$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
-$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
-$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
-*/
+ul.footer.social-links li .social-link:hover {
+    color: rgba(255,205,210,1);
+}
+
 /* C.S.2. Home styles.
    ========================================================================== */
 /* C.S.2.1. Swiper slider */
+.container-fullpage-arteetmarte.home.first.shadown-top-z-level-1:before {
+    margin-top:-6px;
+}
 .home.top-carousel.swiper-container {
     /*width: 100%;*/
     /*height: 586px;*/
@@ -381,12 +449,6 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
     margin:0;
     padding:0;
 }
-/*.home.top-carousel.swiper-container:after {*/
-    /*content: ' ';*/
-    /*position:relative;*/
-    /*display:block;*/
-    /*clear:both;*/
-/*}*/
 .responsive-swiper-container {
     min-width: 100%;
     max-width: 100%;
@@ -548,4 +610,84 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
     /*width:100%;*/
     /*z-index:100;*/
 /*}*/
+/* C.S.4. Standard Page Styles.
+   ========================================================================== */
+.standard-page.top {
+    width:100%;
+    max-height:300px;
+    height:auto;
+    margin:0;
+    padding:0;
+    z-index: 1;
+}
+.standard-page.top img {
+    max-height:300px;
+    margin:0;
+    padding:0;
+    z-index: 1;
+}
+.container-fullpage-arteetmarte.standard-page.first.shadown-top-z-level-1:before {
+    top: -11px;
+}
+#nav-breadcrumb
+{
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-bottom: 1px solid rgba(0,0,0,.6)
+}
+#nav-breadcrumb .breadcrumb {
+    color: rgba(0,0,0, .8);
+}
+#nav-breadcrumb .breadcrumb:before {
+    color: rgba(0,0,0, .65);
+}
+#nav-breadcrumb .breadcrumb:last-child {
+    color: rgba(0,0,0, .45);
+}
 
+/*
+
+// Breadcrumbs
+.breadcrumb {
+  font-size: 18px;
+  color: rgba(255,255,255, .7);
+
+  i,
+  [class^="mdi-"], [class*="mdi-"],
+  i.material-icons {
+    display: inline-block;
+    float: left;
+    font-size: 24px;
+  }
+
+  &:before {
+    content: '\E5CC';
+    color: rgba(255,255,255, .7);
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+    margin: 0 10px 0 8px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:first-child:before {
+    display: none;
+  }
+
+  &:last-child {
+    color: #fff;
+  }
+}
+<nav id="nav-breadcrumb">
+<div class="nav-wrapper">
+<div class="col s12">
+<a href="#!" class="breadcrumb">Inicio</a>
+                                        <a href="#!" class="breadcrumb">Page title / name</a>
+                                                                                           </div>
+                                                                                             </div>
+                                                                                               </nav>
+*/

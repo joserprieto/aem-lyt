@@ -136,18 +136,24 @@ $(document).ready(function() {
          */
         $('.home.groups-carousel.owl-carousel').owlCarousel({
             loop:true,
-            margin:10,
+            margin:15,
             nav:false,
             dot: true,
-            autoplay: false,
+            autoplay: true,
             responsive:{
                 0:{
                     items:1
                 },
                 600:{
+                    items:2
+                },
+                800:{
                     items:3
                 },
                 1000:{
+                    items:4
+                },
+                1200:{
                     items:5
                 }
             }
