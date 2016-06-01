@@ -8,27 +8,27 @@
 // Material Design Icons sizes:
 
 .material-icons.tiny {
-  font-size: $mi-tiny;
+  font-size: $mi-tiny !important;
   line-height: 105%;
   margin: ($mi-tiny / 2.5) 0 ($mi-tiny / 3 ) 0;
 }
 .material-icons.small {
-  font-size: $mi-small;
+  font-size: $mi-small !important;
   line-height: 105%;
   margin: ($mi-small / 2.5) 0 ($mi-small / 3) 0;
 }
 .material-icons.medium {
-  font-size: $mi-medium;
+  font-size: $mi-medium !important;
   line-height: 110%;
   margin: ($mi-medium / 2) 0 ($mi-medium / 2.5) 0;
 }
 .material-icons.large {
-  font-size: $mi-large;
+  font-size: $mi-large !important;
   line-height: 110%;
   margin: ($mi-large / 2) 0 ($mi-large / 2.5) 0;
 }
 .material-icons.xlarge {
-  font-size: $mi-xlarge;
+  font-size: $mi-xlarge !important;
   line-height: 115%;
   margin: ($mi-xlarge / 1.5) 0 ($mi-xlarge / 2) 0;
 }

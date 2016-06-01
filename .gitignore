@@ -12,6 +12,7 @@
 ## Node.js files
 
 ### node modules
+
 /node_modules
 
 ### bower components
@@ -38,7 +39,11 @@
 
 
 ## General files
-
+/third-party/full-width-slider.slider.jquery
+/third-party/full-width-slider.slider
+/third-party/Material Design
+/third-party/Materialize
+/third-party/hero-slider
 ### Some file extensions
 .htaccess
 .DS_Store
