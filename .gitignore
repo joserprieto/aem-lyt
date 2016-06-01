@@ -1,0 +1,49 @@
+# ___ FILES TO IGNORE ON COMMIT / PULL ____
+
+# Refered for this project:
+
+## Composer / PHP vendor files:
+/vendor
+
+
+
+# Generic for all projects:
+
+## Node.js files
+
+### node modules
+/node_modules
+
+### bower components
+/bower_components
+
+
+## IDEs files
+
+### jetBreams phpStorm / idea / PyCharm
+/.idea
+
+### netbeans
+
+/nbproject
+
+### sublime
+.project
+
+
+## Tools files
+
+### wakatime
+.wakatime-project
+
+
+## General files
+
+### Some file extensions
+.htaccess
+.DS_Store
+.DS_Store?
+.Trashes
+Icon?
+Thumbs.db
+*.TODO
