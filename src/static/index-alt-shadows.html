@@ -5,6 +5,27 @@
  joserprieto
   
 
+ @file        index-alt-shadows
+ @author      joserprieto
+ @date        2/06/16 13:46
+ @project     Arte et Marte Layout
+ @projectCode AEM-WEB
+ @site        http://arteetmarte.org
+ @repo        git@bitbucket.org:joserprieto-team/aem-web.git
+
+ @type        HTML
+
+
+
+ **************************************************************************
+-->
+<!--
+**************************************************************************
+ Copyleft joserprieto - Some Rights Reserved
+
+ joserprieto
+
+
  @file        index.html
  @author      joserprieto
  @date        27/05/16 02:00
@@ -162,123 +183,127 @@
     </div>
 </section>
 <script type="application/javascript">
-$(function(){function e(){c=8,p=0,u=10,m=!1,w=$(".home.top-carousel.swiper-container"),n(),o()}function n(){h=$("<div>",{"class":"home progressBar"}),f=$("<div>",{"class":"home bar"}),h.append(f).prependTo(w)}function o(){p=0,m=!1,d=new Date,l=d,g=setInterval(t,u)}function t(){if(m===!1){var e,n;n=1e3*c,d=new Date,e=d-l,l=d,p+=e,v=p/n*100,f.css({width:v+"%"}),p>=n&&i()}}function i(){clearTimeout(g),b.slideNext()}function a(){m=!0}function r(){m=!1}function s(){o()}if($("body").hasClass("home")){var c,p,u,l,d,h,f,w,m,g,v,b;b=new Swiper(".home.top-carousel.swiper-container",{pagination:".home.top-carousel.swiper-pagination",nextButton:".home.top-carousel.swiper-button-next",prevButton:".home.top-carousel.swiper-button-prev",paginationClickable:!0,spaceBetween:1,centeredSlides:!0,loop:!0,preloadImages:!1,lazyLoading:!0,onInit:e,onSlideChangeEnd:s,onTouchStart:a,onTouchEnd:r})}});
+    $(function(){function e(){c=8,p=0,u=10,m=!1,w=$(".home.top-carousel.swiper-container"),n(),o()}function n(){h=$("<div>",{"class":"home progressBar"}),f=$("<div>",{"class":"home bar"}),h.append(f).prependTo(w)}function o(){p=0,m=!1,d=new Date,l=d,g=setInterval(t,u)}function t(){if(m===!1){var e,n;n=1e3*c,d=new Date,e=d-l,l=d,p+=e,v=p/n*100,f.css({width:v+"%"}),p>=n&&i()}}function i(){clearTimeout(g),b.slideNext()}function a(){m=!0}function r(){m=!1}function s(){o()}if($("body").hasClass("home")){var c,p,u,l,d,h,f,w,m,g,v,b;b=new Swiper(".home.top-carousel.swiper-container",{pagination:".home.top-carousel.swiper-pagination",nextButton:".home.top-carousel.swiper-button-next",prevButton:".home.top-carousel.swiper-button-prev",paginationClickable:!0,spaceBetween:1,centeredSlides:!0,loop:!0,preloadImages:!1,lazyLoading:!0,onInit:e,onSlideChangeEnd:s,onTouchStart:a,onTouchEnd:r})}});
 </script>
 
 
 
 <section id="presentation">
 
-    <div class="container-fullpage-arteetmarte home first z-level-1-half-bottom-shadow z-level-2-img-top-shadow">
+    <div
+            class="container-fullpage-arteetmarte home first z-level-1-top-shadow">
+        <div
+                class="container-fullpage-arteetmarte home first z-level-1-bottom-shadow">
 
-        <div class="container-arteetmarte">
+            <div class="container-arteetmarte">
 
-            <div class="section">
+                <div class="section">
 
-                <h1 class="h1-responsive arte-et-marte-accent-color">PRESENTACIÓN</h1>
-                <p class="flow-text">
-                    <img src="/assets/img/LogoArteEtMarte-600x370.svg" class="left logo-arte-et-marte">
-                    "Arte et Marte" es la Concentración de Asociaciones de Recreación Histórica de Época Romana del
-                    noroeste de la Península Ibérica. A ella asistirán grupos de toda la península. Griegos, pueblos
-                    de la Edad del Hierro, Legionarios Republicanos, Imperiales, de la Tardoantigüedad, mundo Civil
-                    y Religioso romano y Gladiadores permitirán viajar al pasado en la Virgen del Camino (León).
-                    <br>
-                    Arte et Marte también tiene cabida para grupos que recreen todo tipo de culturas protohistóricas,
-                    no solo romanos. La Edad del Hierro en la Península Ibérica está llena de ejemplos de contactos y
-                    convivencias entre diferentes culturas: íberos, celtíberos, griegos, romanos y púnicos, o los
-                    pueblos del norte y centro de la meseta interactuaban comercial y culturalmente creando un complejo
-                    mosaico...
-                    <br>
-                    Por ello consideramos interesante recuperar esa interacción entre grupos que recrean diferentes
-                    culturas y sociedades, siendo importante para enriquecer y mejorar la recreación...
-                    <br>
-                    Junto con las actividades de recreación, se realizarán conferencias, mercado de reproducciones
-                    arqueológicas y diferentes talleres y explicaciones para dar a conocer nuestro pasado y nuestro
-                    patrimonio...
-                    <br>
-                    No os lo podéis perder, ¡¡¡OS ESPERAMOS!!!
-                </p>
+                    <h1 class="h1-responsive arte-et-marte-accent-color">PRESENTACIÓN</h1>
+                    <p class="flow-text">
+                        <img src="/assets/img/LogoArteEtMarte-600x370.svg" class="left logo-arte-et-marte">
+                        "Arte et Marte" es la Concentración de Asociaciones de Recreación Histórica de Época Romana del
+                        noroeste de la Península Ibérica. A ella asistirán grupos de toda la península. Griegos, pueblos
+                        de la Edad del Hierro, Legionarios Republicanos, Imperiales, de la Tardoantigüedad, mundo Civil
+                        y Religioso romano y Gladiadores permitirán viajar al pasado en la Virgen del Camino (León).
+                        <br>
+                        Arte et Marte también tiene cabida para grupos que recreen todo tipo de culturas protohistóricas,
+                        no solo romanos. La Edad del Hierro en la Península Ibérica está llena de ejemplos de contactos y
+                        convivencias entre diferentes culturas: íberos, celtíberos, griegos, romanos y púnicos, o los
+                        pueblos del norte y centro de la meseta interactuaban comercial y culturalmente creando un complejo
+                        mosaico...
+                        <br>
+                        Por ello consideramos interesante recuperar esa interacción entre grupos que recrean diferentes
+                        culturas y sociedades, siendo importante para enriquecer y mejorar la recreación...
+                        <br>
+                        Junto con las actividades de recreación, se realizarán conferencias, mercado de reproducciones
+                        arqueológicas y diferentes talleres y explicaciones para dar a conocer nuestro pasado y nuestro
+                        patrimonio...
+                        <br>
+                        No os lo podéis perder, ¡¡¡OS ESPERAMOS!!!
+                    </p>
 
-                <!--   Icon Section   -->
-                <div class="row">
-                    <div class="col s12 m12 l3">
+                    <!--   Icon Section   -->
+                    <div class="row">
+                        <div class="col s12 m12 l3">
 
-                        <div class="icon-block">
+                            <div class="icon-block">
 
-                            <div class="center">
-                                <i class="material-icons large arte-et-marte-red-text">info</i>
-                            </p>
+                                <div class="center">
+                                    <i class="material-icons large arte-et-marte-red-text">info</i>
+                                    </p>
+                                </div>
+
+
+                                <h3 class="center marvel arte-et-marte-red-text">¿QUÉ ES?</h3>
+
+                                <p class="center flow-text">
+                                    Arte et Marte es un evento de recreación histórica, de época romana y prerromana, de
+                                    los pueblos que habitaban la península ibérica en estas épocas; en una franja temporal
+                                    de entre el siglo IV a.C., al siglo V d.C.
+                                </p>
                             </div>
-
-
-                            <h3 class="center marvel arte-et-marte-red-text">¿QUÉ ES?</h3>
-
-                            <p class="center flow-text">
-                                Arte et Marte es un evento de recreación histórica, de época romana y prerromana, de
-                                los pueblos que habitaban la península ibérica en estas épocas; en una franja temporal
-                                de entre el siglo IV a.C., al siglo V d.C.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m12 l3">
-
-                        <div class="icon-block">
-
-                            <div class="center">
-                                <i class="material-icons large arte-et-marte-red-text">today</i>
-                            </div>
-
-
-                            <h3 class="center marvel arte-et-marte-red-text">¿CUÁNDO?</h3>
-
-                            <p class="center flow-text">
-                                El primer fin de semana de junio del 2016; días 3, 4, 5 (viernes, sábado y domingo).
-                            </p>
                         </div>
 
-                    </div>
+                        <div class="col s12 m12 l3">
 
-                    <div class="col s12 m12 l3">
+                            <div class="icon-block">
 
-                        <div class="icon-block">
+                                <div class="center">
+                                    <i class="material-icons large arte-et-marte-red-text">today</i>
+                                </div>
 
-                            <div class="center">
-                                <i class="material-icons large arte-et-marte-red-text">location_on</i>
+
+                                <h3 class="center marvel arte-et-marte-red-text">¿CUÁNDO?</h3>
+
+                                <p class="center flow-text">
+                                    El primer fin de semana de junio del 2016; días 3, 4, 5 (viernes, sábado y domingo).
+                                </p>
                             </div>
-
-
-                            <h3 class="center marvel arte-et-marte-red-text">¿DÓNDE?</h3>
-
-                            <p class="center flow-text">
-                                En La Virgen del Camino, a 8 kilómetros del centro de la ciudad de León.
-                            </p>
 
                         </div>
 
-                    </div>
+                        <div class="col s12 m12 l3">
 
-                    <div class="col s12 m12 l3">
+                            <div class="icon-block">
 
-                        <div class="icon-block">
+                                <div class="center">
+                                    <i class="material-icons large arte-et-marte-red-text">location_on</i>
+                                </div>
 
-                            <div class="center flow-text">
-                                <i class="material-icons large arte-et-marte-red-text">contact_phone</i>
+
+                                <h3 class="center marvel arte-et-marte-red-text">¿DÓNDE?</h3>
+
+                                <p class="center flow-text">
+                                    En La Virgen del Camino, a 8 kilómetros del centro de la ciudad de León.
+                                </p>
+
                             </div>
 
-
-                            <h3 class="center marvel arte-et-marte-red-text">SEPA MÁS</h3>
-
-                            <p class="center flow-text">
-                                Tienes más información en esta mismo sitio web, y puedes ponerte en contacto con nosotros en el apartado "Contacto".
-                            </p>
                         </div>
+
+                        <div class="col s12 m12 l3">
+
+                            <div class="icon-block">
+
+                                <div class="center flow-text">
+                                    <i class="material-icons large arte-et-marte-red-text">contact_phone</i>
+                                </div>
+
+
+                                <h3 class="center marvel arte-et-marte-red-text">SEPA MÁS</h3>
+
+                                <p class="center flow-text">
+                                    Tienes más información en esta mismo sitio web, y puedes ponerte en contacto con nosotros en el apartado "Contacto".
+                                </p>
+                            </div>
+                        </div>
+
+
+
                     </div>
-
-
 
                 </div>
-
             </div>
         </div>
     </div>
@@ -304,165 +329,163 @@ $(function(){function e(){c=8,p=0,u=10,m=!1,w=$(".home.top-carousel.swiper-conta
 
 
 <section id="news">
+    <div
+            class="container-fullpage-arteetmarte home first z-level-1-top-shadow">
+        <div
+                class="container-fullpage-arteetmarte home first z-level-1-bottom-shadow">
 
-    <div class="container-fullpage-arteetmarte home z-level-1-half-top-shadow">
-        <div class="container-fullpage-arteetmarte home z-level-1-half-bottom-shadow">
+        <div class="container-arteetmarte">
 
-            <div class="container-arteetmarte">
+            <div class="section">
 
-                <div class="section">
-
-                    <h1 class="h1-responsive arte-et-marte-accent-color">NOTICIAS</h1>
+                <h1 class="h1-responsive arte-et-marte-accent-color">NOTICIAS</h1>
 
 
-                    <!-- row of news; max the last three news: -->
-                    <div class="row">
+                <!-- row of news; max the last three news: -->
+                <div class="row">
 
-                        <div class="col s12 m12 l3">
-                            <!-- wrapper news -->
-                            <div class="card small home news-item hoverable">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <div class="img-holder">
-                                        <img class="activator" src="http://lorempixel.com/400/200/people/1">
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <span class="card-title news-item-date">
-                                        13<br>Nov
-                                    </span>
-                                    <span class="card-title activator news-item-title truncate">
-                                        Presentación programa Arte et Marte
-                                    </span>
-                                    <p class="right-align">
-                                        <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
-                                        <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
-                                    </p>
-                                </div>
-                                <div class="card-reveal">
-                                    <span class="card-title news-item-title truncate">Presentación programa Arte et Marte<i class="material-icons right">close</i></span>
-                                    <p class="flow-text">
-                                        Hoy sacamos en nuestra web el primer programa del ARTE ET MARTE. Han sido meses de
-                                        intenso trabajo, pero creemos que el esfuerzo merecerá la pena...
-                                        Como veis, habrá de todo: gladiadores, exhibiciones de tiro, venta de esclavos,
-                                        acuñaciones de monedas, forja, demostraciones de armamento, conferencias...
-                                        ¿DE VERDAD TE LO VAS A PERDER?.
-                                        Si quieres hacer un viaje en el tiempo y revivir los recuerdos de nuestros antepasados
-                                        no te puedes perder esta cita.
-                                        Os esperamos en La Virgen del Camino los días 3,4 y 5 de junio con este fantástico
-                                        elenco de actividades y alguna que otra sorpresa...
-                                    </p>
-                                    <p class="right-align">
-                                        <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
-                                        <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
-                                    </p>
+                    <div class="col s12 m12 l3">
+                        <!-- wrapper news -->
+                        <div class="card small home news-item hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <div class="img-holder">
+                                    <img class="activator" src="http://lorempixel.com/400/200/people/1">
                                 </div>
                             </div>
-                            <!-- /wrapper news -->
-                        </div>
 
-                        <div class="col s12 m12 l3">
-                            <!-- wrapper news -->
-                            <div class="card small home news-item hoverable">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <div class="img-holder">
-                                        <img class="activator" src="http://lorempixel.com/400/200/people/2">
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <span class="card-title news-item-date">
-                                        13<br>Nov
-                                    </span>
-                                    <span class="card-title activator news-item-title truncate">
-                                        Presentación programa Arte et Marte
-                                    </span>
-                                    <p class="right-align">
-                                        <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
-                                        <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
-                                    </p>
-                                </div>
-                                <div class="card-reveal">
-                                    <span class="card-title news-item-title truncate">Presentación programa Arte et Marte<i class="material-icons right">close</i></span>
-                                    <p class="flow-text">
-                                        Hoy sacamos en nuestra web el primer programa del ARTE ET MARTE. Han sido meses de
-                                        intenso trabajo, pero creemos que el esfuerzo merecerá la pena...
-                                        Como veis, habrá de todo: gladiadores, exhibiciones de tiro, venta de esclavos,
-                                        acuñaciones de monedas, forja, demostraciones de armamento, conferencias...
-                                        ¿DE VERDAD TE LO VAS A PERDER?.
-                                        Si quieres hacer un viaje en el tiempo y revivir los recuerdos de nuestros antepasados
-                                        no te puedes perder esta cita.
-                                        Os esperamos en La Virgen del Camino los días 3,4 y 5 de junio con este fantástico
-                                        elenco de actividades y alguna que otra sorpresa...
-                                    </p>
-                                    <p class="right-align">
-                                        <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
-                                        <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
-                                    </p>
-                                </div>
+                            <div class="card-content">
+                                <span class="card-title news-item-date">
+                                    13<br>Nov
+                                </span>
+                                <span class="card-title activator news-item-title truncate">
+                                    Presentación programa Arte et Marte
+                                </span>
+                                <p class="right-align">
+                                    <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
+                                    <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
+                                </p>
                             </div>
-                            <!-- /wrapper news -->
-                        </div>
-
-                        <div class="col s12 m12 l3">
-                            <!-- wrapper news -->
-                            <!-- wrapper news -->
-                            <div class="card small home news-item hoverable">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <div class="img-holder">
-                                        <img class="activator" src="http://lorempixel.com/400/200/people/2">
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <span class="card-title news-item-date">
-                                        13<br>Nov
-                                    </span>
-                                    <span class="card-title activator news-item-title truncate">
-                                        Presentación programa Arte et Marte
-                                    </span>
-                                    <p class="right-align">
-                                        <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
-                                        <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
-                                    </p>
-                                </div>
-                                <div class="card-reveal">
-                                    <span class="card-title news-item-title truncate">Presentación programa Arte et Marte<i class="material-icons right">close</i></span>
-                                    <p class="flow-text">
-                                        Hoy sacamos en nuestra web el primer programa del ARTE ET MARTE. Han sido meses de
-                                        intenso trabajo, pero creemos que el esfuerzo merecerá la pena...
-                                        Como veis, habrá de todo: gladiadores, exhibiciones de tiro, venta de esclavos,
-                                        acuñaciones de monedas, forja, demostraciones de armamento, conferencias...
-                                        ¿DE VERDAD TE LO VAS A PERDER?.
-                                        Si quieres hacer un viaje en el tiempo y revivir los recuerdos de nuestros antepasados
-                                        no te puedes perder esta cita.
-                                        Os esperamos en La Virgen del Camino los días 3,4 y 5 de junio con este fantástico
-                                        elenco de actividades y alguna que otra sorpresa...
-                                    </p>
-                                    <p class="right-align">
-                                        <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
-                                        <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
-                                    </p>
-                                </div>
+                            <div class="card-reveal">
+                                <span class="card-title news-item-title truncate">Presentación programa Arte et Marte<i class="material-icons right">close</i></span>
+                                <p class="flow-text">
+                                    Hoy sacamos en nuestra web el primer programa del ARTE ET MARTE. Han sido meses de
+                                    intenso trabajo, pero creemos que el esfuerzo merecerá la pena...
+                                    Como veis, habrá de todo: gladiadores, exhibiciones de tiro, venta de esclavos,
+                                    acuñaciones de monedas, forja, demostraciones de armamento, conferencias...
+                                    ¿DE VERDAD TE LO VAS A PERDER?.
+                                    Si quieres hacer un viaje en el tiempo y revivir los recuerdos de nuestros antepasados
+                                    no te puedes perder esta cita.
+                                    Os esperamos en La Virgen del Camino los días 3,4 y 5 de junio con este fantástico
+                                    elenco de actividades y alguna que otra sorpresa...
+                                </p>
+                                <p class="right-align">
+                                    <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
+                                    <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
+                                </p>
                             </div>
-                            <!-- /wrapper news -->
                         </div>
-
-                        <div class="col s12 m12 l3 center-align">
-                            <a class="waves-effect waves-light btn-large btn-more-news arte-et-marte-bg-primary-color">
-                                <i class="material-icons right">add</i>Ver más noticias
-                            </a>
-                        </div>
-
-
+                        <!-- /wrapper news -->
                     </div>
 
+                    <div class="col s12 m12 l3">
+                        <!-- wrapper news -->
+                        <div class="card small home news-item hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <div class="img-holder">
+                                    <img class="activator" src="http://lorempixel.com/400/200/people/2">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <span class="card-title news-item-date">
+                                    13<br>Nov
+                                </span>
+                                <span class="card-title activator news-item-title truncate">
+                                    Presentación programa Arte et Marte
+                                </span>
+                                <p class="right-align">
+                                    <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
+                                    <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title news-item-title truncate">Presentación programa Arte et Marte<i class="material-icons right">close</i></span>
+                                <p class="flow-text">
+                                    Hoy sacamos en nuestra web el primer programa del ARTE ET MARTE. Han sido meses de
+                                    intenso trabajo, pero creemos que el esfuerzo merecerá la pena...
+                                    Como veis, habrá de todo: gladiadores, exhibiciones de tiro, venta de esclavos,
+                                    acuñaciones de monedas, forja, demostraciones de armamento, conferencias...
+                                    ¿DE VERDAD TE LO VAS A PERDER?.
+                                    Si quieres hacer un viaje en el tiempo y revivir los recuerdos de nuestros antepasados
+                                    no te puedes perder esta cita.
+                                    Os esperamos en La Virgen del Camino los días 3,4 y 5 de junio con este fantástico
+                                    elenco de actividades y alguna que otra sorpresa...
+                                </p>
+                                <p class="right-align">
+                                    <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
+                                    <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /wrapper news -->
+                    </div>
+
+                    <div class="col s12 m12 l3">
+                        <!-- wrapper news -->
+                        <!-- wrapper news -->
+                        <div class="card small home news-item hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <div class="img-holder">
+                                    <img class="activator" src="http://lorempixel.com/400/200/people/2">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <span class="card-title news-item-date">
+                                    13<br>Nov
+                                </span>
+                                <span class="card-title activator news-item-title truncate">
+                                    Presentación programa Arte et Marte
+                                </span>
+                                <p class="right-align">
+                                    <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
+                                    <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title news-item-title truncate">Presentación programa Arte et Marte<i class="material-icons right">close</i></span>
+                                <p class="flow-text">
+                                    Hoy sacamos en nuestra web el primer programa del ARTE ET MARTE. Han sido meses de
+                                    intenso trabajo, pero creemos que el esfuerzo merecerá la pena...
+                                    Como veis, habrá de todo: gladiadores, exhibiciones de tiro, venta de esclavos,
+                                    acuñaciones de monedas, forja, demostraciones de armamento, conferencias...
+                                    ¿DE VERDAD TE LO VAS A PERDER?.
+                                    Si quieres hacer un viaje en el tiempo y revivir los recuerdos de nuestros antepasados
+                                    no te puedes perder esta cita.
+                                    Os esperamos en La Virgen del Camino los días 3,4 y 5 de junio con este fantástico
+                                    elenco de actividades y alguna que otra sorpresa...
+                                </p>
+                                <p class="right-align">
+                                    <!--<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Leer noticia completa..</a>-->
+                                    <a class="btn-floating btn-medium waves-effect waves-light arte-et-marte-bg-dark-primary-color"><i class="material-icons">add</i></a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /wrapper news -->
+                    </div>
+
+                    <div class="col s12 m12 l3 center-align">
+                        <a class="waves-effect waves-light btn-large btn-more-news arte-et-marte-bg-primary-color">
+                            <i class="material-icons right">add</i>Ver más noticias
+                        </a>
+                    </div>
+
+
                 </div>
+
             </div>
-
         </div>
-    </div>
-
+    </div></div>
 </section>
 
 
@@ -479,140 +502,134 @@ $(function(){function e(){c=8,p=0,u=10,m=!1,w=$(".home.top-carousel.swiper-conta
 
 
 <section id="groups">
+    <div class="container-fullpage-arteetmarte shadown-top-z-level-1 shadown-bottom-z-level-1">
 
-    <div class="container-fullpage-arteetmarte home first z-level-1-half-top-shadow">
-        <div class="container-fullpage-arteetmarte home first z-level-1-half-bottom-shadow">
+        <div class="container-arteetmarte">
 
+            <div class="section">
 
-            <div class="container-arteetmarte">
+                <h1 class="h1-responsive arte-et-marte-accent-color">GRUPOS</h1>
 
-                <div class="section">
+                <div class="home groups-carousel owl-carousel owl-theme-arte-et-marte">
 
-                    <h1 class="h1-responsive arte-et-marte-accent-color">GRUPOS</h1>
-
-                    <div class="home groups-carousel owl-carousel owl-theme-arte-et-marte">
-
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/1">
-                                        <span class="card-title">1st Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/1">
+                                    <span class="card-title">1st Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/2">
-                                        <span class="card-title">2nd Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                        <!-- /wrapper group -->
+                    </div>
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/2">
+                                    <span class="card-title">2nd Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/3">
-                                        <span class="card-title">3rd Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                        <!-- /wrapper group -->
+                    </div>
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/3">
+                                    <span class="card-title">3rd Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/4">
-                                        <span class="card-title">4th Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                        <!-- /wrapper group -->
+                    </div>
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/4">
+                                    <span class="card-title">4th Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/5">
-                                        <span class="card-title">5th Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                        <!-- /wrapper group -->
+                    </div>
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/5">
+                                    <span class="card-title">5th Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/6">
-                                        <span class="card-title">6th Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                        <!-- /wrapper group -->
+                    </div>
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/6">
+                                    <span class="card-title">6th Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/7">
-                                        <span class="card-title">7th Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                        <!-- /wrapper group -->
+                    </div>
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/7">
+                                    <span class="card-title">7th Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/8">
-                                        <span class="card-title">8th Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                        <!-- /wrapper group -->
+                    </div>
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/8">
+                                    <span class="card-title">8th Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="home groups-carousel item">
-                            <!-- wrapper group -->
-                            <div class="card-only-image small hoverable">
-                                <a class="">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img src="http://lorempixel.com/600/400/people/9">
-                                        <span class="card-title">9th Caetra Lucensium</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /wrapper group -->
+                        <!-- /wrapper group -->
+                    </div>
+                    <div class="home groups-carousel item">
+                        <!-- wrapper group -->
+                        <div class="card-only-image small hoverable">
+                            <a class="">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="http://lorempixel.com/600/400/people/9">
+                                    <span class="card-title">9th Caetra Lucensium</span>
+                                </div>
+                            </a>
                         </div>
-
+                        <!-- /wrapper group -->
                     </div>
 
-                    <script type="application/javascript">
-                    $(function(){$("body").hasClass("home")&&$(".home.groups-carousel.owl-carousel").owlCarousel({loop:!0,margin:15,nav:!1,dot:!0,autoplay:!0,responsive:{0:{items:1},600:{items:2},800:{items:3},1e3:{items:4},1200:{items:5}}})});
-                    </script>
-
                 </div>
-            </div>
 
+                <script type="application/javascript">
+                    $(function(){$("body").hasClass("home")&&$(".home.groups-carousel.owl-carousel").owlCarousel({loop:!0,margin:15,nav:!1,dot:!0,autoplay:!0,responsive:{0:{items:1},600:{items:2},800:{items:3},1e3:{items:4},1200:{items:5}}})});
+                </script>
+
+            </div>
         </div>
     </div>
-
 </section>
 
 
@@ -629,40 +646,36 @@ $(function(){function e(){c=8,p=0,u=10,m=!1,w=$(".home.top-carousel.swiper-conta
 
 
 <section id="patrocinators">
+    <div class="container-fullpage-arteetmarte shadown-top-z-level-1 shadown-bottom-z-level-1">
 
-    <div class="container-fullpage-arteetmarte home first z-level-1-half-top-shadow">
-        <div class="container-fullpage-arteetmarte home first z-level-2-img-bottom-shadow">
+        <div class="container-arteetmarte">
 
-            <div class="container-arteetmarte">
+            <div class="section">
 
-                <div class="section">
-
-                    <h1 class="h1-responsive arte-et-marte-accent-color">ORGANIZAN Y PATROCINAN</h1>
-                    <div class="row center">
-                        <div class="col s4 m2 l2">
-                            Logo Macedónica img responsive
-                        </div>
-                        <div class="col s4 m2 l2">
-                            Diputación de León img responsive
-                        </div>
-                        <div class="col s4 m2 l2">
-                            Ayuntamiento img responsive
-                        </div>
-                        <div class="col s4 m2 l2">
-                            Ins Leo Cul img responsive
-                        </div>
-                        <div class="col s4 m2 l2">
-                            Corte Inglés 75 img responsive
-                        </div>
-                        <div class="col s4 m2 l2">
-                            E.Leclerc
-                        </div>
+                <h1 class="h1-responsive arte-et-marte-accent-color">ORGANIZAN Y PATROCINAN</h1>
+                <div class="row center">
+                    <div class="col s4 m2 l2">
+                        Logo Macedónica img responsive
                     </div>
-
-
+                    <div class="col s4 m2 l2">
+                        Diputación de León img responsive
+                    </div>
+                    <div class="col s4 m2 l2">
+                        Ayuntamiento img responsive
+                    </div>
+                    <div class="col s4 m2 l2">
+                        Ins Leo Cul img responsive
+                    </div>
+                    <div class="col s4 m2 l2">
+                        Corte Inglés 75 img responsive
+                    </div>
+                    <div class="col s4 m2 l2">
+                        E.Leclerc
+                    </div>
                 </div>
-            </div>
 
+
+            </div>
         </div>
     </div>
 </section>
