@@ -5,6 +5,9 @@
 ## Composer / PHP vendor files:
 /vendor
 
+## Generated sources:
+/web
+
 
 
 # Generic for all projects:

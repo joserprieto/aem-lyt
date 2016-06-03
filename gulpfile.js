@@ -90,8 +90,8 @@ var basePaths =
         },
         assets:
         {
-            src     : 'src/static/assets/',
-            dest    : 'web/assets/',
+            src     : 'src/static/theme/ArteEtMarte/assets/',
+            dest    : 'web/theme/ArteEtMarte/assets/',
             bower   : 'bower_components/',
             node    : 'node_modules/'
         },

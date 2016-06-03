@@ -234,7 +234,7 @@ body {
     height: 10px;
     top: -10px;
     z-index: 20;
-    background: url('/assets/img/shadow-top.png') bottom repeat-x;
+    background: url('/theme/ArteEtMarte/assets/img/shadow-top.png') bottom repeat-x;
 }
 .container-fullpage-arteetmarte.z-level-2-img-bottom-shadow:after {
     content: ' ';
@@ -244,7 +244,7 @@ body {
     height:10px;
     bottom: -10px;
     z-index: 20;
-    background:url('/assets/img/shadow-bottom.png') top repeat-x;
+    background:url('/theme/ArteEtMarte/assets/img/shadow-bottom.png') top repeat-x;
 }
 .container-fullpage-arteetmarte.z-level-1-half-top-shadow {
     box-shadow: 0 -5px 11px 0 rgba(0, 0, 0, 0.18), 0 -4px 15px 0 rgba(0, 0, 0, 0.15);
@@ -452,10 +452,10 @@ ul.footer.social-links li .social-link:hover {
 /*.container-fullpage-arteetmarte.home.first.shadown-top-z-level-1:before {*/
     /*margin-top:-6px;*/
 /*}*/
-.container-fullpage-arteetmarte.home.first {
+.container-fullpage-arteetmarte.first {
     margin-top:-6px;
 }
-.home.top-carousel.swiper-container {
+.top-carousel.swiper-container {
     /*width: 100%;*/
     /*height: 586px;*/
     position: relative;
@@ -582,6 +582,56 @@ ul.footer.social-links li .social-link:hover {
 }
 .home.groups-carousel.swiper-slide:nth-child(3n) {
     width: 40%;
+}
+#google-map {
+    height: 480px;
+}
+
+
+@media only screen and (min-width: 360px) {
+    #google-map {
+        height: 220px;
+    }
+}
+@media only screen and (min-width: 480px) {
+    #google-map {
+        height: 240px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #google-map {
+        height: 280px;
+    }
+}
+@media only screen and (min-width: 780px) {
+    #google-map {
+        height: 320px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    #google-map {
+        height: 360px;
+    }
+}
+@media only screen and (min-width: 960px) {
+    #google-map {
+        height: 400px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #google-map {
+        height: 480px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    #google-map {
+        height: 520px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    #google-map {
+        height: 200px;
+    }
 }
 
 /* C.S.3. News and news items styles.
