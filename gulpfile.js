@@ -91,8 +91,8 @@ var basePaths =
         },
         assets:
         {
-            src     : 'src/static/assets/',
-            dest    : 'web/assets/',
+            src     : 'src/static/theme/ArteEtMarte/assets/',
+            dest    : 'web/theme/ArteEtMarte/assets/',
             bower   : 'bower_components/',
             node    : 'node_modules/'
         },
@@ -210,7 +210,6 @@ var basePaths =
             ],
         jSscripts:
             [
-                jsJQuery,
                 jsMaterialize,
                 jsSwiper,
                 jsOwlCarousel2
@@ -219,8 +218,8 @@ var basePaths =
 
 // Variables dependent of --dev
 
-var cssDestFileName     = isProduction?'styles.min.css':'styles.css',
-    jsFDestFileName     = isProduction?'scripts.min.js':'scripts.js';
+var cssDestFileName     = isProduction?'styles.css':'styles.css',
+    jsFDestFileName     = isProduction?'scripts.js':'scripts.js';
 
 
 /**
@@ -436,17 +435,17 @@ gulp.task('build-css', function() {
         .pipe(gulpif(!isProduction, debug({title: 'build-css; building css:'})))
         .pipe(concat(cssDestFileName))
         .pipe(autoprefixer(autoprefixOptions))
-        .pipe(
-            gulpif(isProduction,
-                    combineMediaQueries({
-                        log: true
-                    })
-            )
-        )
+
         .pipe(gulpif(isProduction, cssmin()))
         .pipe(size())
         .pipe(gulp.dest(paths.cssStyles.dest));
-
+//.pipe(
+    //    gulpif(isProduction,
+    //            combineMediaQueries({
+    //                log: true
+    //            })
+    //    )
+    //)
 });
 
 /**

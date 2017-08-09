@@ -1,0 +1,756 @@
+/**************************************************************************
+ * Copyleft joserprieto - Some Rights Reserved
+ *
+ * joserprieto
+ *
+ *
+ * @file        custom-styles.css
+ * @author      joserprieto
+ * @date        27/05/16 13:59
+ * @project     Arte et Marte Layout
+ * @projectCode AEM-LYT
+ * @site        http://preview.arteetmarte.org
+ * @repo        git@github.com:joserprieto/aem-lyt.git
+ *
+ * @type        css
+ */
+
+/**
+ * Custom Styles:
+ *
+ * Elements:
+ *
+ *  C.S.1. Top Principal Navbar in Home Page
+ *  C.S.2. Custom containers
+ *  C.S.3. Z-Levels and containers for sections full width and its shadows
+ *  C.S.4. Home swiper slider
+ *  C.S.5. Hn tags
+ *  C.S.6.
+ *  C.S.7.
+ *  C.S.8.
+ *  C.S.10.
+ *  C.S.11.
+ *  C.S.12.
+ *  C.S.13.
+ *  C.S.14.
+ *  C.S.15.
+ *  C.S.16.
+ *  C.S.17.
+ */
+
+
+/* C.S.1. General CSS Styles
+   ========================================================================== */
+
+body {
+    /* Put bg color of body on the "accent" color of this Materialize Palette: */
+    background-color: rgba(121,85,72,1);
+}
+/* C.S.1.1. Top Principal Navbar in Home Page */
+.nav-principal {
+    float:left;
+    height:0px;
+    width:0px;
+    line-height:0px;
+}
+.nav-principal a.button-collapse {
+    z-index:100;
+    background-color:#E12F31;
+    color:#ffffff;
+    padding:0 .8em 0 .6em;
+    width:64px;
+    height:64px;
+    line-height:64px;
+    box-shadow: 2px 20px 20px 5px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 2px 20px 20px 5px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 2px 20px 20px 5px rgba(0, 0, 0, 0.45);
+}
+.nav-principal a.button-collapse:after {
+    content: "MENU";
+    position: absolute;
+    top: 64px;
+    left: 0px;
+    z-index: 100;
+    width: 64px;
+    height: 15px;
+    line-height: 15px;
+    background-color: #E12F31;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.nav-principal .side-nav {
+    background-color: #E12F31;
+    border-right:1px solid #000;
+}
+.nav-principal .side-nav .li-side-nav-principal-logo a {
+    height: auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.nav-principal .side-nav-principal ul,
+.nav-principal .side-nav-principal ul a,
+.nav-principal .side-nav-principal li,
+.nav-principal .side-nav-principal li a,
+.nav-principal .side-nav-principal ul li,
+.nav-principal .side-nav-principal ul li a,
+.nav-principal .side-nav-principal li li,
+.nav-principal .side-nav-principal li li a {
+    font-family: Cinzel, sans-serif;
+    color: #f9d4d4;
+}
+.nav-principal .side-nav-principal > li > a,
+.nav-principal .side-nav-principal > li > ul {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+.nav-principal .side-nav-principal > li > a,
+.nav-principal .side-nav-principal > li > ul > span {
+    font-size:2rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, .65);
+}
+.nav-principal .side-nav-principal > li > ul > li > a {
+    font-size:1.75rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+.nav-principal .side-nav-principal > li > ul > span,
+.nav-principal .side-nav-principal > li > ul > li {
+    padding:0px 30px;
+}
+.nav-principal .side-nav-principal li li a,
+.nav-principal .side-nav-principal li ul a,
+.nav-principal .side-nav-principal li ul li a {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.nav-principal .side-nav-principal a:hover {
+    color: #f2a3a4;
+    background-color: #831314;
+}
+
+@media only screen and (max-width: 601px) {
+    .nav-principal a.button-collapse {
+        padding:0 .8em 0 .6em;
+        width:56px;
+        height:56px;
+        line-height:56px;
+        box-shadow: 2px 15px 15px 5px rgba(0, 0, 0, 0.45);
+        -webkit-box-shadow: 2px 15px 15px 5px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: 2px 15px 15px 5px rgba(0, 0, 0, 0.45);
+    }
+    .nav-principal a.button-collapse:after {
+        position: absolute;
+        top: 56px;
+        width: 56px;
+    }
+    .nav-principal .side-nav-principal li,
+    .nav-principal .side-nav-principal li a {
+        height: auto;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .nav-principal .side-nav-principal > li > a,
+    .nav-principal .side-nav-principal > li > ul > span {
+        font-size:.9rem;
+
+    }
+    .nav-principal .side-nav-principal > li > ul > li > a {
+        font-size:.8rem;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .nav-principal .side-nav-principal > li > a,
+    .nav-principal .side-nav-principal > li > ul > span {
+        font-size:1.1rem;
+
+    }
+    .nav-principal .side-nav-principal > li > ul > li > a {
+        font-size:1rem;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    .nav-principal .side-nav-principal > li > a,
+    .nav-principal .side-nav-principal > li > ul > span {
+        font-size:1.4rem;
+
+    }
+    .nav-principal .side-nav-principal > li > ul > li > a {
+        font-size:1.2rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    .nav-principal .side-nav-principal > li > a,
+    .nav-principal .side-nav-principal > li > ul > span {
+        font-size:1.6rem;
+
+    }
+    .nav-principal .side-nav-principal > li > ul > li > a {
+        font-size:1.4rem;
+    }
+}
+/* C.S.1.2. Custom Containers */
+/**
+ * Custom container for fullpage section with shadow z-depth
+ */
+.container-fullpage-arteetmarte {
+    width:100% !important;
+    height:auto;
+    margin:0;
+    padding:0;
+    z-index:20;
+    background-color: #fff;
+}
+/**
+ * Custom container for sections with shadow z-depth
+ */
+.container-arteetmarte {
+    margin: 0 auto;
+    max-width:1600px;
+    width: 100%;
+    z-index:21;
+}
+@media only screen and (max-width: 1559px) {
+    .container-arteetmarte {
+        width: 90%;
+    }
+}
+.container-arteetmarte .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+/* C.S.1.3. Z-Levels and containers for sections full width */
+.container-fullpage-arteetmarte.z-level-2-img-top-shadow:before {
+    content: ' ';
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 10px;
+    top: -10px;
+    z-index: 20;
+    background: url('/theme/ArteEtMarte/assets/img/shadow-top.png') bottom repeat-x;
+}
+.container-fullpage-arteetmarte.z-level-2-img-bottom-shadow:after {
+    content: ' ';
+    position:relative;
+    display:block;
+    width:100%;
+    height:10px;
+    bottom: -10px;
+    z-index: 20;
+    background:url('/theme/ArteEtMarte/assets/img/shadow-bottom.png') top repeat-x;
+}
+.container-fullpage-arteetmarte.z-level-1-half-top-shadow {
+    box-shadow: 0 -5px 11px 0 rgba(0, 0, 0, 0.18), 0 -4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 -5px 11px 0 rgba(0, 0, 0, 0.18), 0 -4px 15px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 -5px 11px 0 rgba(0, 0, 0, 0.18), 0 -4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.container-fullpage-arteetmarte.z-level-1-half-bottom-shadow {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* C.S.1.4. Hn tags */
+h1, h2, h3, h4 {
+    font-family: CaesarRegular, sans-serif;
+}
+h1.marvel,
+h2.marvel,
+h3.marvel,
+h4.marvel {
+    font-family: Marvel, sans-serif;
+}
+
+/* C.S.1.5. Material icons */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-60 { font-size: 60px; }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* C.S.1.6. Helper css class for colours */
+
+/* C.S.1.7. Parallax CSS class */
+.parallax-container h1,
+.parallax-container h2,
+.parallax-container h3,
+.parallax-container h4,
+.parallax-container h5 {
+    font-family:Cinzel, sans-serif;
+    color: #fff;
+    text-shadow: 3px 3px 4px rgba(121, 85, 72, .85);
+}
+
+/* C.S.1.8. Card only image */
+
+.card-only-image {
+    position: relative;
+    margin: 0.5rem 1rem 1rem 1rem;
+    background-color: #fff;
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    border-radius: 2px; }
+.card-only-image .card-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+.card-only-image.card.small .card-image,
+.card-only-image.card.medium .card-image,
+.card-only-image.card.large .card-image {
+    height:100%;
+    max-height: 100%;
+    overflow: hidden; }
+.card-only-image .card-image {
+    position: relative; }
+.card-only-image .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.card-only-image .card-image .card-title {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+.card-only-image {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.card-width-20-percent {
+    width:20% !important;
+}
+.card-width-25-percent {
+    width:25% !important;
+}
+.card-width-30-percent {
+    width:30% !important;
+}
+.card-width-40-percent {
+    width:40% !important;
+}
+.card-width-50-percent {
+    width:50% !important;
+}
+/* C.S.1.9. Footer */
+.footer.logo-arte-et-marte,
+.footer.logo-legio-IIII-macedonica {
+    width:100%;
+    height:auto;
+}
+.footer.event-data,
+.footer.organizer
+{
+    color: rgba(255,255,255,.7);
+    text-align:justify;
+}
+.footer.event-data a,
+.footer.organizer a,
+.footer.footer-copyright a
+{
+    color: rgba(244,67,54,.7);
+}
+.footer.event-data a:hover,
+.footer.organizer a:hover,
+.footer.footer-copyright a:hover
+{
+    color: rgba(244,67,54,1);
+}
+.footer.event-data h5,
+.footer.sitemap h5,
+.footer.organizer h5
+{
+    font-size:2.2rem;
+    color: rgba(255,255,255,.8);
+}
+/* SiteMap */
+ul.footer.ul-sitemap,
+ul.footer.ul-sitemap > li,
+ul.footer.ul-sitemap > li > a
+{
+    color: rgba(255,255,255,.85);
+    font-size:1.4rem;
+}
+ul.footer.ul-sitemap > li > a:hover
+{
+    color: rgba(244,67,54,.85);
+}
+ul.footer.ul-sitemap > ul,
+ul.footer.ul-sitemap > ul > li,
+ul.footer.ul-sitemap > li > ul > li > a,
+ul.footer.ul-sitemap > li > li,
+ul.footer.ul-sitemap > li > li > a
+{
+    color: rgba(255,255,255,.7) !important;
+    font-size:1.3rem !important;
+}
+ul.footer.ul-sitemap > li > ul > li > a:hover,
+ul.footer.ul-sitemap > li > li > a:hover
+{
+    color: rgba(244,67,54,.7) !important;
+}
+ul.footer.ul-sitemap > ul,
+ul.footer.ul-sitemap > li > ul
+{
+    margin-left:2rem;
+}
+ul.footer.ul-sitemap hr {
+    width: 80%;
+    color: rgba(255,255,255,.25);
+    background-color: rgba(255,255,255,.25);
+    padding: 0;
+    margin: 1.5rem auto;
+}
+
+/*  C.S.1.9.2. Social Links */
+ul.footer.social-links {
+    line-height:4rem;
+    vertical-align: baseline;
+}
+ul.footer.social-links:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ul.footer.social-links li {
+    float:left;
+    margin-right: 3rem;
+    color: rgba(255,205,210,.4);
+}
+ul.footer.social-links li .social-link {
+    color: rgba(255,205,210,.25);
+}
+
+ul.footer.social-links li .social-link:hover {
+    color: rgba(255,205,210,1);
+}
+
+/* C.S.2. Home styles.
+   ========================================================================== */
+/* C.S.2.1. Swiper slider */
+/*.container-fullpage-arteetmarte.home.first.shadown-top-z-level-1:before {*/
+    /*margin-top:-6px;*/
+/*}*/
+.container-fullpage-arteetmarte.first {
+    margin-top:-6px;
+}
+.top-carousel.swiper-container {
+    /*width: 100%;*/
+    /*height: 586px;*/
+    position: relative;
+    margin:0;
+    padding:0;
+}
+.responsive-swiper-container {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.home.top-carousel.swiper-slide {}
+.home.top-carousel.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+}
+.home.top-carousel.swiper-pagination .swiper-pagination-bullet {
+    background: #fff;
+    opacity:.25;
+    box-shadow: 2px 2px 2px 1px rgba(131, 19, 20, .85);
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(131, 19, 20, .85);
+    -moz-box-shadow: 2px 2px 2px 1px rgba(131, 19, 20, .85);
+}
+.home.top-carousel.swiper-pagination .swiper-pagination-bullet-active {
+    opacity:1;
+}
+.home.top-carousel.swiper-button-next,
+.home.top-carousel.swiper-button-prev {
+    background-color: #E12F31;
+    padding: 1.5rem;
+}
+.home.bar{
+    width: 0%;
+    max-width: 100%;
+    height: 4px;
+    background: #E12F31;
+}
+.home.progressBar{
+    width: 100%;
+    background: #fff;
+}
+/* C.S.2.2. Logo on presentation */
+#presentation .logo-arte-et-marte {
+    width:15rem;
+    height:auto;
+}
+@media only screen and (min-width: 360px) {
+    #presentation .logo-arte-et-marte {
+        width:5rem;
+    }
+}
+@media only screen and (min-width: 480px) {
+    #presentation .logo-arte-et-marte {
+        width:7rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #presentation .logo-arte-et-marte {
+        width:9rem;
+    }
+}
+@media only screen and (min-width: 780px) {
+    #presentation .logo-arte-et-marte {
+        width:10rem;
+    }
+}
+@media only screen and (min-width: 900px) {
+    #presentation .logo-arte-et-marte {
+        width:11rem;
+    }
+}
+@media only screen and (min-width: 960px) {
+    #presentation .logo-arte-et-marte {
+        width:12rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #presentation .logo-arte-et-marte {
+        width:13rem;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    #presentation .logo-arte-et-marte {
+        width:14rem;
+    }
+}
+@media only screen and (max-width: 360px) {
+    #presentation .logo-arte-et-marte {
+        width:4rem;
+    }
+}
+/* C.S.2.3. Button more news */
+.btn-more-news {
+    margin-top:200px;
+}
+
+/* C.S.2.4. Groups Carousel */
+.home.groups-carousel.swiper-container {
+    width: 100%;
+    height: auto;
+}
+.home.groups-carousel.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 80%;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.home.groups-carousel.swiper-slide:nth-child(2n) {
+    width: 60%;
+}
+.home.groups-carousel.swiper-slide:nth-child(3n) {
+    width: 40%;
+}
+#google-map {
+    height: 480px;
+}
+
+
+@media only screen and (min-width: 360px) {
+    #google-map {
+        height: 220px;
+    }
+}
+@media only screen and (min-width: 480px) {
+    #google-map {
+        height: 240px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #google-map {
+        height: 280px;
+    }
+}
+@media only screen and (min-width: 780px) {
+    #google-map {
+        height: 320px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    #google-map {
+        height: 360px;
+    }
+}
+@media only screen and (min-width: 960px) {
+    #google-map {
+        height: 400px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #google-map {
+        height: 480px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    #google-map {
+        height: 520px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    #google-map {
+        height: 200px;
+    }
+}
+
+/* C.S.3. News and news items styles.
+   ========================================================================== */
+
+.card-title.news-item-date {
+    font-size:1.1rem !important;
+    line-height:110% !important;
+    float: left;
+    text-align:center;
+    border: 1px solid rgba(211,47,47,1);
+    color: rgba(244,67,54,1) !important;
+    border-radius: .7rem;
+    margin-right: 1rem;
+    padding: .5rem;
+}
+.card-title.news-item-title {
+    color: rgba(211,47,47,1) !important;
+}
+.news-item img.activator:after {
+    content:'';
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: blue;
+    opacity: 0.1;
+}
+.news-item img.activator:hover:after {
+    opacity: 0;
+}
+/*{*/
+    /*background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");*/
+    /*background-color: rgba(0,0,0,0.5);*/
+    /*height: 100%;*/
+    /*width:100%;*/
+    /*z-index:100;*/
+/*}*/
+/* C.S.4. Standard Page Styles.
+   ========================================================================== */
+.standard-page.top {
+    width:100%;
+    max-height:300px;
+    height:auto;
+    margin:0;
+    padding:0;
+    z-index: 1;
+}
+.standard-page.top img {
+    max-height:300px;
+    margin:0;
+    padding:0;
+    z-index: 1;
+}
+.container-fullpage-arteetmarte.standard-page.first.shadown-top-z-level-1:before {
+    top: -11px;
+}
+#nav-breadcrumb
+{
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-bottom: 1px solid rgba(0,0,0,.6)
+}
+#nav-breadcrumb .breadcrumb {
+    color: rgba(0,0,0, .8);
+}
+#nav-breadcrumb .breadcrumb:before {
+    color: rgba(0,0,0, .65);
+}
+#nav-breadcrumb .breadcrumb:last-child {
+    color: rgba(0,0,0, .45);
+}
+
+/*
+
+// Breadcrumbs
+.breadcrumb {
+  font-size: 18px;
+  color: rgba(255,255,255, .7);
+
+  i,
+  [class^="mdi-"], [class*="mdi-"],
+  i.material-icons {
+    display: inline-block;
+    float: left;
+    font-size: 24px;
+  }
+
+  &:before {
+    content: '\E5CC';
+    color: rgba(255,255,255, .7);
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+    margin: 0 10px 0 8px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:first-child:before {
+    display: none;
+  }
+
+  &:last-child {
+    color: #fff;
+  }
+}
+<nav id="nav-breadcrumb">
+<div class="nav-wrapper">
+<div class="col s12">
+<a href="#!" class="breadcrumb">Inicio</a>
+                                        <a href="#!" class="breadcrumb">Page title / name</a>
+                                                                                           </div>
+                                                                                             </div>
+                                                                                               </nav>
+*/
