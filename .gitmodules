@@ -1,0 +1,9 @@
+[submodule "third-party/Swiper"]
+	path = third-party/Swiper
+	url = git@github.com:nolimits4web/Swiper.git
+[submodule "third-party/OwlCarousel2"]
+	path = third-party/OwlCarousel2
+	url = git@github.com:OwlCarousel2/OwlCarousel2.git
+[submodule "third-party/OwlCarousel"]
+	path = third-party/OwlCarousel
+	url = git@github.com:OwlFonk/OwlCarousel.git
