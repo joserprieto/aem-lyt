@@ -10,7 +10,7 @@
  * @project     Arte et Marte Layout
  * @projectCode AEM-LYT
  * @site        http://preview.arteetmarte.org
- * @repo        git@bitbucket.org:joserprieto-team/aem-lyt.git
+ * @repo        git@github.com:joserprieto/aem-lyt.git
  *
  * @type        javascript
  */
@@ -33,6 +33,7 @@
 var gulp = require('gulp'),
     eventStream = require('event-stream'),
     gutil = require('gulp-util'),
+    livereloadwebserver = require('gulp-server-livereload'),
     plugins = require("gulp-load-plugins")({
         pattern: ['gulp-*', 'gulp.*'],
         replaceString: /\bgulp[\-.]/
@@ -528,6 +529,38 @@ gulp.task('watch', function() {
     */
 
 
+});
+
+/**
+ * @task        webserver
+ * @description Gulp task to run the web server and live reload the changes in browser
+ * @usage
+ *   $ gulp webserver
+ * @see         https://www.npmjs.com/package/gulp-server-livereload
+ * @see         https://www.npmjs.com/package/livereload
+ *
+ * Isolated task; with a
+ *      $ gulp
+ * The default tasks works fine
+ *
+ * default host: localhost
+ * default port: 8000
+ * default livereload port (socket.io): 35729
+ */
+gulp.task('webserver', function() {
+    gulp.src('web')
+        .pipe(
+            livereloadwebserver(
+                    {
+                        livereload:       true,
+                        directoryListing: true,
+                        defaultFile:      'index.html',
+                        open:             true,
+                        log:              'debug',
+                        clientConsole:    true
+                    }
+                )
+        );
 });
 
 /**

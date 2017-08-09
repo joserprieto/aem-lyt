@@ -37,16 +37,16 @@ General commands for init:
 
 Directory structure:
 
-  [root]
-    ├── bower_modules           <── bower sources
-    ├── node_modules            <── node sources
-    ├── src                     <── source folder  
-    │   └── static
-    │       └── assets
-    │           ├── css
-    │           ├── font
-    │           ├── ico
-    │           ├── img
-    │           ├── js
-    │           └── vendor
-    └── web                     <── destination folder
+      [root]
+        ├── bower_modules           <── bower sources
+        ├── node_modules            <── node sources
+        ├── src                     <── source folder  
+        │   └── static
+        │       └── assets
+        │           ├── css
+        │           ├── font
+        │           ├── ico
+        │           ├── img
+        │           ├── js
+        │           └── vendor
+        └── web                     <── destination folder

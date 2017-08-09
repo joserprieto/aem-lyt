@@ -20,3 +20,15 @@ concatenate and minify them.
 - FontAwesome
 - Google Fonts
 - Material Design Icons
+
+## Gulp use:
+
+Simple, use gulp, after npm and all dependencies are installed.
+
+## Previews:
+
+![Home preview](resources/doc/preview-home.png)
+
+![Preview main menu](resources/doc/preview-main-menu.png)
+
+![Preview standard page](resources/doc/preview-standard-page.png)
